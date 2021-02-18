@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
 
   devise_for :users, controllers: {
   sessions: 'users/sessions',
@@ -9,10 +8,11 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :new, :create]
   resources :replies, only: [:new, :show, :create]
   resources :favorites, only: [:create, :destroy]
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:edit, :update]
   resources :contact, only: [:index]
   resources :calendars, only: [:show]
 
+  get 'users/my_page' => 'users#show'
   get 'users/unsubscribe' => 'users#unsubscribe'
   get 'users/withdrawal' => 'users#withdrawal'
 
