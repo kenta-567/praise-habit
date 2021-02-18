@@ -1,24 +1,37 @@
-# README
+ # praise habit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+誰かを励ましたり応援するコメント投稿サイト
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+コメント投稿サイト
 
-* Configuration
+### テーマを選んだ理由
 
-* Database creation
+コロナで人との関りが少なくなってきて、気持ちがうつむきやすくなっていると
+感じます。そんな日常を少しでも明るくしようと思い、誰かを励ましたり応援する投稿サイトを作ろうと思いました。
 
-* Database initialization
+### ターゲットユーザ
 
-* How to run the test suite
+全年齢対象
 
-* Services (job queues, cache servers, search engines, etc.)
+### 主な利用シーン
 
-* Deployment instructions
+日常の時間のある時
 
-* ...
+## 設計書
+
+### 機能一覧
+
+<https://docs.google.com/spreadsheets/d/1Bq2aaSqHnHyQYzat89DNW2B0fHb6a_aXyZLZCwTx8Os/edit?usp=sharing>
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+
+
