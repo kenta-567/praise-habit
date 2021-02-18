@@ -1,23 +1,24 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'calendars/show'
-  get 'favorites/create'
-  get 'favorites/destroy'
-  get 'replies/new'
-  get 'replies/create'
-  get 'replies/show'
-  get 'posts/index'
-  get 'posts/new'
-  get 'posts/create'
-  get 'users/show'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/unsubscribe'
-  get 'users/withdrawal'
-  get 'contacts/index'
-  get 'contacts/confirm'
-  get 'contacts/thanks'
-  get 'homes/top'
-  get 'homes/about'
+
+  devise_for :users, controllers: {
+  sessions: 'users/sessions',
+  registrations: 'users/registrations'
+}
+  root to: 'homes#top'
+  resources :posts, only: [:index, :new, :create]
+  resources :replies, only: [:new, :show, :create]
+  resources :favorites, only: [:create, :destroy]
+  resources :users, only: [:show, :edit, :update]
+  resources :contact, only: [:index]
+  resources :calendars, only: [:show]
+
+  get 'users/unsubscribe' => 'users#unsubscribe'
+  get 'users/withdrawal' => 'users#withdrawal'
+
+  get 'contacts/confirm' => 'contacts#confirm'
+  get 'contacts/thanks' => 'contacts#thanks'
+
+  get 'homes/about' => 'homes#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
