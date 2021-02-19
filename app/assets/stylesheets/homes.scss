@@ -1,3 +1,98 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//  topページ
+
+.top-image {
+  height: 650px;
+  width: 100%;
+  background-image: url('photo-1502355984-b735cb2550ce');
+  background-position: top;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+
+.title {
+  padding-top: 250px;
+  font-size: 60px;
+  font-family: 'Prata', serif;
+}
+
+
+.sub-title {
+  padding-top: 10px;
+  font-size: 24px;
+  font-family: 'Prata', serif;
+}
+
+.in-button {
+  width: 240px;
+  height: 100px;
+  border: 2px solid #34495e;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 0 40px 0;
+}
+
+.button-effect {
+  width: 240px;
+  height: 100px;
+  top: -2px;
+  right: -240px;
+  background: #34495e;
+  position: absolute;
+  transition: all .5s ease;
+  z-index: 1;
+}
+
+.button-name {
+  font-family: arial;
+  font-size: 24px;
+  color: #34495e;
+  text-decoration: none;
+  line-height: 100px;
+  transition: all .5s ease;
+  z-index: 2;
+  position: relative;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.in-button:hover .button-effect{
+  right: 0;
+}
+.in-button:hover .button-name{
+  color: #fff;
+}
+
+
+// aboutページ
+
+.about-image {
+  height: 100%;
+  width: 100%;
+  background-image: url('praise-1987229_960_720');
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.message-box {
+  height: 850px;
+  width: 600px;
+  margin-top: 150px;
+  margin-left: 255px;
+  background-color: #f7f7f7;
+}
+.message {
+  padding-top: 50px;
+  text-align: center;
+}
+.message-second {
+  padding-top: 30px;
+  text-align: center;
+}

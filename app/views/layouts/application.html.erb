@@ -4,52 +4,57 @@
     <title>PraiseHabit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="container">
-      <header>
+    <header>
+      <div class="header">
         <a class="navbar-logo" href="/">PRAiSE HABiT</a>
-        <nav>
-          <ul>
+        <nav class="navbar">
+          <ul class="nav">
             <% if user_signed_in? %>
-              <li>
+              <li class="nav-list">
                 <%=link_to "My Page" %>
               </li>
-              <li>
-                <%=link_to "Post Page", posts_path %>
+              <li class="nav-list">
+                <%=link_to "Post Page", posts_path, class: "font" %>
               </li>
-              <li>
-                <%=link_to "A B O U T", homes_about_path %>
+              <li class="nav-list">
+                <%=link_to "A B O U T", homes_about_path, class: "font" %>
               </li>
-              <li>
-                <%=link_to "C O N T A C T", contact_index_path %>
+              <li class="nav-list">
+                <%=link_to "C O N T A C T", contact_index_path, class: "font" %>
               </li>
-              <li>
-                <%=link_to "Sign Out", destroy_user_session_path, method: :delete %>
+              <li class="nav-list">
+                <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "font" %>
               </li>
             <% else %>
-              <li>
-                <%=link_to "A B O U T", homes_about_path %>
+              <li class="nav-list">
+                <%=link_to "A B O U T", homes_about_path, class: "font" %>
               </li>
-              <li>
-                <%=link_to "C O N T A C T", contact_index_path %>
+              <li class="nav-list">
+                <%=link_to "C O N T A C T", contact_index_path, class: "font" %>
               </li>
             <% end %>
           </ul>
         </nav>
-      </header>
+      </div>
+    </header>
 
 
-      <main>
-        <%= yield %>
-      </main>
+    <main>
+      <%= yield %>
+    </main>
 
+    <footer>
+      <div class="footer">
+        <p>Wishing a bright day</p>
+      </div>
+    </footer>
 
-      <footer></footer>
-    </div>
   </body>
 </html>
