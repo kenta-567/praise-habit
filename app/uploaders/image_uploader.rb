@@ -13,17 +13,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  include CarrierWave::MiniMagick
-  process resize_to_fit: [200, 100]
 
-
-  def auto
-    manipulate! do|image|
-      image.auto_orient
-    end
-  end
-
-  process :auto
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)

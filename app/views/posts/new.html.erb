@@ -1,2 +1,29 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="conteiner">
+
+  <div class="post-heading">
+    <h1>New Praise!</h1>
+  </div>
+  <div class="receive-member">
+    <div class="receive-member-content">
+      <img src=<%= @user.profile_image %> class = "icon_image", fallback: "no_image.jpg">
+      <div class="receive-profile">
+        <label class="profile-name">ニックネーム:</label><label class="profile-item"><%= @user.nickname %></label><br>
+        <label class="profile-place">住まい:</label><label class="profile-item"><%= @user.place %></label><br>
+        <label class="profile-job">仕事:</label><label class="profile-item"><%= @user.job %></label>
+      </div>
+    </div>
+  </div>
+  <div class="content-group">
+    <div class="content-form">
+    <%= form_with model: @post, url: posts_path, method: :post, local: true do |f| %>
+      <div class="form-group">
+        <%= f.text_area :post_content, class:"form-control" %>
+      </div>
+      <div class="post-btn">
+        <%= f.submit "SEND PRAISE", class: "btn btn-lg btn-success" %>
+      </div>
+      <%= f.hidden_field :receive_user_id, :value => @user.id %>
+    <% end %>
+    </div>
+  </div>
+</div>

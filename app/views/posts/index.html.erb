@@ -1,0 +1,28 @@
+<div class="conteiner">
+
+  <div class="post-heading">
+    <h1>Let's Praise!</h1>
+  </div>
+
+  <div class="members">
+    <h2 class="members-title">MEMBERS</h2>
+    <div class="member-list">
+      <% @users.each do |user| %>
+      <% if user.id != current_user.id %>
+        <div class="member">
+          <img src=<%= user.profile_image %> class = "icon_image", fallback: "no_image.jpg">
+          <div class="profile">
+            <label class="profile-name">ニックネーム:</label><label class="profile-item"><%= user.nickname %></label><br>
+            <label class="profile-place">住まい:</label><label class="profile-item"><%= user.place %></label><br>
+            <label class="profile-job">仕事:</label><label class="profile-item"><%= user.job %></label>
+          </div>
+          <div class="send-btn">
+            <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn btn-sm btn-success" %>
+          </div>
+        </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="ranking"></div>
+</div>

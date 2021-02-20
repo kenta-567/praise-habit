@@ -18,7 +18,7 @@
           <ul class="nav">
             <% if user_signed_in? %>
               <li class="nav-list">
-                <%=link_to "My Page" %>
+                <%=link_to "My Page", users_my_page_path, class: "font" %>
               </li>
               <li class="nav-list">
                 <%=link_to "Post Page", posts_path, class: "font" %>

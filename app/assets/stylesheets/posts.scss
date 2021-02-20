@@ -1,3 +1,108 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-heading {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+
+.members {
+  width: 50%;
+}
+
+.members-title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Prata', serif;
+}
+
+.member-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.member {
+  display: flex;
+  height: 100px;
+  width: 60%;
+  margin-left: 150px;
+}
+
+.icon_image {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+.profile {
+ width: 50%;
+ margin-left: 20px;
+ font-family: 'Prata', serif;
+}
+
+.profile-place {
+  margin-left: 47px;
+  font-family: 'Prata', serif;
+}
+
+.profile-job {
+  margin-left: 63px;
+  font-family: 'Prata', serif;
+}
+
+.profile-item {
+  margin-left: 20px;
+  font-family: 'Prata', serif;
+}
+
+.send-btn {
+  padding-left: 50px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+// new.html
+
+.receive-member {
+  display: flex;
+  justify-content: center;
+}
+
+.receive-member-content {
+  display: flex;
+  height: 100px;
+  width: 30%;
+  justify-content: center;
+}
+
+.receive-profile {
+ width: 50%;
+ margin-left: 20px;
+ font-family: 'Prata', serif;
+ text-align: center;
+}
+
+.content-group {
+  margin-top: 100px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.content-form {
+  width: 25%;
+}
+
+.post-btn {
+  padding-left: 50px;
+  margin-top: 60px;
+  text-align: center;
+}
