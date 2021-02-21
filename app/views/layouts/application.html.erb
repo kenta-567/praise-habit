@@ -24,20 +24,20 @@
                 <%=link_to "Post Page", posts_path, class: "font" %>
               </li>
               <li class="nav-list">
-                <%=link_to "A B O U T", homes_about_path, class: "font" %>
+                <%=link_to "Receive Page", reply_path(current_user.id), class: "font" %>
               </li>
               <li class="nav-list">
-                <%=link_to "C O N T A C T", contact_index_path, class: "font" %>
+                <%=link_to "Contact", contact_index_path, class: "font" %>
               </li>
               <li class="nav-list">
                 <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "font" %>
               </li>
             <% else %>
               <li class="nav-list">
-                <%=link_to "A B O U T", homes_about_path, class: "font" %>
+                <%=link_to "About", homes_about_path, class: "font" %>
               </li>
               <li class="nav-list">
-                <%=link_to "C O N T A C T", contact_index_path, class: "font" %>
+                <%=link_to "Contact", contact_index_path, class: "font" %>
               </li>
             <% end %>
           </ul>

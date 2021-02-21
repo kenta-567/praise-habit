@@ -18,3 +18,54 @@
   margin-top: 100px;
   padding-left: 0;
 }
+
+
+// my-page
+
+.my-profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.my-profile-content {
+  display: flex;
+  height: 100px;
+  width: 30%;
+  justify-content: center;
+}
+
+.my-profile-item {
+  width: 50%;
+  margin-left: 20px;
+  font-family: 'Prata', serif;
+  text-align: center;
+}
+
+.profile-edit {
+
+}
+
+.post-content {
+  width: 50%;
+}
+
+.post-content-heding {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Prata', serif;
+}
+
+.post-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.post-item {
+  display: flex;
+  height: 100px;
+  width: 60%;
+  margin-left: 150px;
+  flex-direction: column;
+}

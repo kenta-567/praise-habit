@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @users = User.all
+    @rankings = User.find(Post.group(:user_id).order('count(user_id) desc').limit(10).pluck(:user_id))
   end
 
   def new
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save!
-      redirect_to users_my_page_path(current_user.id)
+      redirect_to users_my_page_path
     else
       render :new
     end
@@ -24,6 +25,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:user_id, :receive_user_id, :posted_number, :post_content)
+    params.require(:post).permit(:user_id, :receive_user_id, :post_content)
   end
 end

@@ -1,3 +1,37 @@
 // Place all the styles related to the replies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// show-page
+
+.reply-heading {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+
+.reply-box {
+  display: flex;
+}
+
+.reply-content {
+  width: 50%;
+}
+
+.reply-content-heading {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Prata', serif;
+}
+
+.thanks-content {
+  width: 50%;
+}
+
+.thanks-content-heading {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Prata', serif;
+}

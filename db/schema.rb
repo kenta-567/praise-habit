@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_18_120424) do
+ActiveRecord::Schema.define(version: 2021_02_21_025711) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "post_id"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2021_02_18_120424) do
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "receive_user_id"
-    t.integer "posted_number"
     t.text "post_content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
