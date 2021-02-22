@@ -8,11 +8,19 @@
         <h2>Praise</h2>
       </div>
       <div class="post-list">
-        <% @receive.each do |messege| %>
+        <% @receives.each do |receive| %>
           <div class="post-item">
-            <lavel>From<%= messege.user.nickname %></lavel>
-            <text><%= messege.post_content %></text>
-            <label><%= time_ago_in_words(messege.created_at) %></label>
+            <lavel>From<%= receive.user.nickname %></lavel>
+            <text><%= receive.post_content %></text>
+            <label><%= time_ago_in_words(receive.created_at) %></label>
+            <% if receive.replies.blank? %>
+              <div class="send-btn">
+                <%= link_to "Thanks", {controller: 'replies', action: 'new', id: receive.user.id}, class: "btn btn-sm btn-success" %>
+              </div>
+            <% end %>
+            <% receive.replies.each do |reply| %>
+              <%= reply.reply_content %><br><br>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -20,6 +28,21 @@
     <div class="thanks-content">
       <div class="thanks-content-heading">
         <h2>Thanks</h2>
+      </div>
+       <div class="post-list">
+        <% @thanks.each do |thank| %>
+          <% if thank.replies.present? %>
+          <div class="post-item">
+            <label>Thanks from<%= thank.receive_user.nickname %></label>
+            <label><%= thank.post_content %></label>
+                        ↓<br>
+            <% thank.replies.each do |reply| %>
+              <%= reply.reply_content %><br><br>
+              <label><%= time_ago_in_words(reply.created_at) %></label>
+            <% end %>
+          </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

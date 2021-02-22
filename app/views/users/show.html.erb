@@ -21,12 +21,12 @@
       <h2>My Post List</h2>
     </div>
     <div class="post-list">
-      <% @user.posts.each do |messege| %>
+      <% @user.posts.each do |user| %>
         <div class="post-item">
-        <% post_user = User.find_by(id: messege.receive_user_id) %>
-          <lavel>Dear<%= post_user.nickname %></lavel>
-          <text><%= messege.post_content %></text>
-          <label><%= time_ago_in_words(messege.created_at) %></label>
+        <% post_user = User.find_by(id: user.receive_user_id) %>
+          <label>Dear<%= post_user.nickname %></label>
+          <text><%= user.post_content %></text>
+          <label><%= time_ago_in_words(user.created_at) %></label>
         </div>
       <% end %>
     </div>

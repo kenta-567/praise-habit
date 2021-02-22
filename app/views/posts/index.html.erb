@@ -28,10 +28,11 @@
         <h2>Post Rnking</h2>
       </div>
       <div class="ranking-list">
-        <% @rankings.each.with_index(1) do |user, i| %>
+        <% @rankings.each.with_index(1) do |ranking, i| %>
         <div class="ranking-item">
           <label>第<%= i %>位</label>
-          <label><%= user.nickname %></label>
+          <label><%= ranking.nickname %></label>
+          <label><%= ranking.posts.count %></label>
         </div>
         <% end %>
       </div>

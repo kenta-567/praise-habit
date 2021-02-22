@@ -26,6 +26,14 @@
   font-family: 'Prata', serif;
 }
 
+.reply-item {
+  display: flex;
+  height: 100px;
+  width: 60%;
+  flex-direction: column;
+  text-align: center;
+}
+
 .thanks-content {
   width: 50%;
 }
