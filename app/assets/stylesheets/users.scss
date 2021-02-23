@@ -30,21 +30,77 @@
 
 .my-profile-content {
   display: flex;
-  height: 100px;
-  width: 30%;
+  height: 150px;
+  width: 45%;
   justify-content: center;
 }
 
-.my-profile-item {
+.my-icon_image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.my-profile-box {
   width: 50%;
   margin-left: 20px;
   font-family: 'Prata', serif;
-  text-align: center;
+  padding: 3.5% 0;
 }
 
-.profile-edit {
-
+.my-profile-name {
+  font-size: 20px;
+  width: 45%;
 }
+
+.my-profile-place {
+  width: 45%;
+  font-family: 'Prata', serif;
+  font-size: 20px;
+}
+
+.my-profile-job {
+  width: 45%;
+  font-family: 'Prata', serif;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.my-profile-item {
+  margin-left: 20px;
+  font-family: 'Prata', serif;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.btn-box {
+  flex-direction: column;
+}
+
+.edit-btn {
+  margin: 20px 0;
+}
+
+.calender-btn {
+  margin: 40px 0;
+}
+
+a.btn-shadow {
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+  -webkit-box-shadow: 4px 4px 0 #000;
+  box-shadow: 4px 4px 0 #000;
+  width: 150px;
+  height: 40px;
+}
+
+a.btn-shadow:hover {
+  -webkit-box-shadow: -4px -4px 0 #000;
+  box-shadow: -4px -4px 0 #000;
+}
+
 
 .post-content {
   width: 50%;
@@ -53,7 +109,7 @@
 .post-content-heding {
   margin-bottom: 30px;
   text-align: center;
-  font-family: 'Prata', serif;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .post-list {
@@ -70,5 +126,27 @@
   margin-bottom: 30px;
   flex-direction: column;
   text-align: center;
+  position: relative;
+  padding: 0.25em 1em;
 }
 
+
+.post-item:before,.post-item:after{
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.post-item:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top: 0;
+    left: 0;
+}
+.post-item:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom: 0;
+    right: 0;
+}

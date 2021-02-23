@@ -1,2 +1,7 @@
-<h1>Calendars#show</h1>
-<p>Find me in app/views/calendars/show.html.erb</p>
+<div class="conteiner">
+  <%= month_calendar do |date| %>
+    <%= date.strftime("%d") %>
+  <% end %>
+
+  <p>今月の投稿数　現在<%= @posts.to_s  %></p>
+</div>

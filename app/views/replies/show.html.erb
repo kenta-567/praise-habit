@@ -10,8 +10,8 @@
       <div class="post-list">
         <% @receives.each do |receive| %>
           <div class="post-item">
-            <lavel>From<%= receive.user.nickname %></lavel>
-            <text><%= receive.post_content %></text>
+            <label>From<%= receive.user.nickname %></label>
+            <label><%= receive.post_content %></label>
             <label><%= time_ago_in_words(receive.created_at) %></label>
             <% if receive.replies.blank? %>
               <div class="send-btn">

@@ -24,13 +24,17 @@
 .members-heading {
   margin-bottom: 30px;
   text-align: center;
-  font-family: 'Prata', serif;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .member-list {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+hr {
+  width: 60%;
+  margin-left: 150px;
 }
 
 .member {
@@ -70,9 +74,19 @@
 }
 
 .send-btn {
-  padding-left: 50px;
+  padding-left: 20px;
   padding-top: 25px;
-  text-align: center;
+}
+
+a.btn-border {
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+
+a.btn-border:hover {
+  color: #fff;
+  background: #000;
 }
 
 .ranking {
@@ -82,11 +96,34 @@
 .ranking-heading {
   margin-bottom: 30px;
   text-align: center;
-  font-family: 'Prata', serif;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.ranking-box {
+  text-align: center;
 }
 
 .ranking-list {
-  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ranking-number {
+  width: 10%;
+  font-size: 20px;
+  font-family: 'Prata', serif;
+  letter-spacing: 5px;
+}
+
+.ranking-name {
+  width: 25%;
+  font-size: 20px;
+  font-family: 'Prata', serif;
+}
+
+.ranking-post {
+  width: 10%;
+  font-size: 20px;
+  font-family: 'Prata', serif;
 }
 
 // new.html

@@ -4,17 +4,24 @@
   </div>
   <div class="my-profile">
     <div class="my-profile-content">
-      <img src=<%= @user.profile_image %> class = "icon_image", fallback: "no_image.jpg">
-      <div class="my-profile-item">
-        <label class="profile-name">ニックネーム:</label><label class="profile-item"><%= @user.nickname %></label><br>
-        <label class="profile-place">住まい:</label><label class="profile-item"><%= @user.place %></label><br>
-        <label class="profile-job">仕事:</label><label class="profile-item"><%= @user.job %></label>
+      <img src=<%= @user.profile_image %> class = "my-icon_image", fallback: "no_image.jpg">
+      <div class="my-profile-box">
+        <label class="my-profile-name">ニックネーム:</label><label class="my-profile-item"><%= @user.nickname %></label><br>
+        <label class="my-profile-place">住まい:</label><label class="my-profile-item"><%= @user.place %></label><br>
+        <label class="my-profile-job">仕事:</label><label class="my-profile-item"><%= @user.job %></label>
       </div>
     </div>
-    <div class="profile-edit">
-      <%= link_to "EDIT", edit_user_path(@user.id), class: 'btn btn-success px-0 py-1 btn-lg edit-button' %>
+    <div class="btn-box">
+      <div class="edit-btn">
+        <%= link_to "EDIT", edit_user_path(@user.id), class: 'btn btn-shadow' %>
+      </div>
+      <div class="calender-btn">
+        <%= link_to "Calender", calendar_path(@user.id), class: 'btn btn-shadow' %>
+      </div>
     </div>
   </div>
+
+
 
   <div class="post-content">
     <div class="post-content-heding">
@@ -25,7 +32,7 @@
         <div class="post-item">
         <% post_user = User.find_by(id: user.receive_user_id) %>
           <label>Dear<%= post_user.nickname %></label>
-          <text><%= user.post_content %></text>
+          <label><%= user.post_content %></label>
           <label><%= time_ago_in_words(user.created_at) %></label>
         </div>
       <% end %>

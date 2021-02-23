@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
 
   def index
-    @users = User.all
+    @users = User.page(params[:page]).reverse_order
     @rankings = User.find(Post.group(:user_id).order('count(user_id) desc').limit(10).pluck(:user_id))
   end
 

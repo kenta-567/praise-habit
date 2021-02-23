@@ -1,3 +1,47 @@
 // Place all the styles related to the calendars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.simple-calendar {
+  padding-top: 10%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.calendar-heading {
+  text-align: center;
+}
+
+.calendar-title {
+  font-size: 36px;
+  margin: 0 3%;
+}
+
+.wday-0 {
+background-color: #fdedec;
+}
+
+.wday-1 {
+  background-color: #fff;
+}
+
+.wday-2 {
+  background-color: #fff;
+}
+
+.wday-3 {
+  background-color: #fff;
+}
+
+.wday-4 {
+  background-color: #fff;
+}
+
+.wday-5 {
+  background-color: #fff;
+}
+
+.wday-6 {
+background-color: #ebf5fb;
+}

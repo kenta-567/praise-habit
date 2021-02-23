@@ -8,6 +8,7 @@
       <div class="member-list">
         <% @users.each do |user| %>
           <% if user.id != current_user.id %>
+          <hr></hr>
             <div class="member">
               <img src=<%= user.profile_image %> class = "icon_image", fallback: "no_image.jpg">
               <div class="profile">
@@ -16,23 +17,22 @@
                 <label class="profile-job">仕事:</label><label class="profile-item"><%= user.job %></label>
               </div>
               <div class="send-btn">
-                <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn btn-sm btn-success" %>
+                <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn btn-border" %>
               </div>
             </div>
           <% end %>
         <% end %>
       </div>
+      <%= paginate @users %>
     </div>
     <div class="ranking">
-      <div class="ranking-heading">
-        <h2>Post Rnking</h2>
-      </div>
-      <div class="ranking-list">
+      <h2 class="ranking-heading">Post Rnking</h2>
+      <div class="ranking-box">
         <% @rankings.each.with_index(1) do |ranking, i| %>
-        <div class="ranking-item">
-          <label>第<%= i %>位</label>
-          <label><%= ranking.nickname %></label>
-          <label><%= ranking.posts.count %></label>
+        <div class="ranking-list">
+          <label class="ranking-number">第<%= i %>位</label>
+          <label class="ranking-name"><%= ranking.nickname %></label>
+          <label class="ranking-post"><%= ranking.posts.count %>&nbsp;post</label>
         </div>
         <% end %>
       </div>
