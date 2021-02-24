@@ -10,16 +10,14 @@
       <div class="post-list">
         <% @receives.each do |receive| %>
           <div class="post-item">
-            <label>From<%= receive.user.nickname %></label>
-            <label><%= receive.post_content %></label>
-            <label><%= time_ago_in_words(receive.created_at) %></label>
+            <label class="letter-name">from&emsp;<%= receive.user.nickname %></label>
+            <label class="letter-content"><%= receive.post_content %></label>
+            <label class="letter-time"><%= time_ago_in_words(receive.created_at) %></label>
             <% if receive.replies.blank? %>
-              <div class="send-btn">
-                <%= link_to "Thanks", {controller: 'replies', action: 'new', id: receive.user.id}, class: "btn btn-sm btn-success" %>
-              </div>
+              <%= link_to "Thanks", {controller: 'replies', action: 'new', id: receive.user.id}, class: "fuwatto_btn_yellow" %>
             <% end %>
             <% receive.replies.each do |reply| %>
-              <%= reply.reply_content %><br><br>
+              <label class="letter-content"><%= reply.reply_content %></label>
             <% end %>
           </div>
         <% end %>
@@ -33,12 +31,12 @@
         <% @thanks.each do |thank| %>
           <% if thank.replies.present? %>
           <div class="post-item">
-            <label>Thanks from<%= thank.receive_user.nickname %></label>
-            <label><%= thank.post_content %></label>
+            <label class="thanks-letter-name">thanks&nbsp;from&emsp;<%= thank.receive_user.nickname %></label>
+            <label class="thanks-letter-content"><%= thank.post_content %></label>
                         ↓<br>
             <% thank.replies.each do |reply| %>
-              <%= reply.reply_content %><br><br>
-              <label><%= time_ago_in_words(reply.created_at) %></label>
+              <label class="thanks-letter-content"><%= reply.reply_content %></label>
+              <label class="thanks-letter-time"><%= time_ago_in_words(reply.created_at) %></label>
             <% end %>
           </div>
           <% end %>

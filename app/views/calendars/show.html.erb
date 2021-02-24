@@ -1,7 +1,16 @@
 <div class="conteiner">
   <%= month_calendar do |date| %>
-    <%= date.strftime("%d") %>
-  <% end %>
+    <%= date.strftime("%d") %><br>
+    <% if current_user.posts.blank? %>
 
-  <p>今月の投稿数　現在<%= @posts.to_s  %></p>
+    <% end %>
+  <% end %>
+  <div class="today-post">
+    <label class="today-post-item">今日の投稿数</label><br>
+    <label class="today-post-item">現在&emsp;<%= @post_day %>&ensp;Praise</label>
+  </div>
+  <div class="month-post">
+    <label class="month-post-item">今月の投稿数</label><br>
+    <label class="month-post-item">現在&emsp;<%= @post_month %>&ensp;Praise</label>
+  </div>
 </div>

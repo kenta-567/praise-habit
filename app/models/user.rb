@@ -25,4 +25,14 @@ class User < ApplicationRecord
      沖縄県:47
   }
 
+def not_current_user?(current_user)
+  current_user.id != id
+end
+
+def exists_posts_at_day?(day)
+  posts.each.any? do |post|
+  post.created_at.to_date === day
+ end
+end
+
 end

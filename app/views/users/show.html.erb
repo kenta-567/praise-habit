@@ -31,9 +31,9 @@
       <% @user.posts.each do |user| %>
         <div class="post-item">
         <% post_user = User.find_by(id: user.receive_user_id) %>
-          <label>Dear<%= post_user.nickname %></label>
-          <label><%= user.post_content %></label>
-          <label><%= time_ago_in_words(user.created_at) %></label>
+          <label class="letter-name">Dear&emsp;<%= post_user.nickname %></label>
+          <label class="letter-content"><%= user.post_content %></label>
+          <label class="letter-time"><%= time_ago_in_words(user.created_at) %></label>
         </div>
       <% end %>
     </div>

@@ -120,33 +120,13 @@ a.btn-shadow:hover {
 
 .post-item {
   display: flex;
-  height: 100px;
-  width: 60%;
-  margin-left: 150px;
-  margin-bottom: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+  padding: 0.5%;
   flex-direction: column;
   text-align: center;
-  position: relative;
-  padding: 0.25em 1em;
-}
-
-
-.post-item:before,.post-item:after{
-    content:'';
-    width: 20px;
-    height: 30px;
-    position: absolute;
-    display: inline-block;
-}
-.post-item:before{
-    border-left: solid 1px #5767bf;
-    border-top: solid 1px #5767bf;
-    top: 0;
-    left: 0;
-}
-.post-item:after{
-    border-right: solid 1px #5767bf;
-    border-bottom: solid 1px #5767bf;
-    bottom: 0;
-    right: 0;
+  background-image: url('airmail-envelope.jpg');
+  background-size: cover;
+  background-position: center;
 }

@@ -16,6 +16,15 @@
 .calendar-title {
   font-size: 36px;
   margin: 0 3%;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.previous {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.next {
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .wday-0 {
@@ -44,4 +53,34 @@ background-color: #fdedec;
 
 .wday-6 {
 background-color: #ebf5fb;
+}
+
+.icon_star {
+  padding-left: 40%;
+}
+
+// show-page
+
+.today-post {
+  width: 50%;
+  margin-left: 20%;
+  margin-top: 3%;
+  font-family: 'Prata', serif;
+}
+
+.today-post-item {
+  font-size: 20px;
+  font-family: 'Prata', serif;
+}
+
+.month-post {
+  width: 50%;
+  margin-left: 20%;
+  margin-top: 3%;
+  font-family: 'Prata', serif;
+}
+
+.month-post-item {
+  font-size: 20px;
+  font-family: 'Prata', serif;
 }
