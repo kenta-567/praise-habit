@@ -22,20 +22,38 @@
   </div>
 
 
-
-  <div class="post-content">
-    <div class="post-content-heding">
-      <h2>My Post List</h2>
+  <div class="my-content">
+    <div class="post-content">
+      <div class="post-content-heading">
+        <h2>My Post List</h2>
+      </div>
+      <div class="post-list">
+        <% @user.posts.each do |user| %>
+          <div class="post-item">
+          <% post_user = User.find_by(id: user.receive_user_id) %>
+            <label class="letter-name">Dear&emsp;<%= post_user.nickname %></label>
+            <label class="letter-content"><%= user.post_content %></label>
+            <label class="letter-time"><%= time_ago_in_words(user.created_at) %></label>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="post-list">
-      <% @user.posts.each do |user| %>
-        <div class="post-item">
-        <% post_user = User.find_by(id: user.receive_user_id) %>
-          <label class="letter-name">Dear&emsp;<%= post_user.nickname %></label>
-          <label class="letter-content"><%= user.post_content %></label>
-          <label class="letter-time"><%= time_ago_in_words(user.created_at) %></label>
-        </div>
+
+    <div class="favorite-content">
+      <div class="favorite-content-heading">
+        <h2>My Favorite Praise!</h2>
+      </div>
+      <div class="post-list">
+      <% if @favorites.present? %>
+        <% @favorites.each do |favorite| %>
+          <div class="post-item">
+            <label class="letter-name">from&emsp;<%= favorite.user.nickname %></label>
+            <label class="letter-content"><%= favorite.post_content %></label>
+            <label class="letter-time"><%= time_ago_in_words(favorite.created_at) %></label>
+          </div>
+        <% end %>
       <% end %>
+      </div>
     </div>
   </div>
 </div>

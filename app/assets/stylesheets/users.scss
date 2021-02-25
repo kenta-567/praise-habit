@@ -101,12 +101,15 @@ a.btn-shadow:hover {
   box-shadow: -4px -4px 0 #000;
 }
 
+.my-content {
+  display: flex;
+}
 
 .post-content {
   width: 50%;
 }
 
-.post-content-heding {
+.post-content-heading {
   margin-bottom: 30px;
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
@@ -126,7 +129,17 @@ a.btn-shadow:hover {
   padding: 0.5%;
   flex-direction: column;
   text-align: center;
-  background-image: url('airmail-envelope.jpg');
-  background-size: cover;
-  background-position: center;
+  box-shadow: 0 0 10px #3c3c3c;
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+.favorite-content {
+  width: 50%;
+}
+
+.favorite-content-heading {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
 }

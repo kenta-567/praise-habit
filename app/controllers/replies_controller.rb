@@ -19,6 +19,7 @@ class RepliesController < ApplicationController
     @user = User.find(current_user.id)
     @receives = Post.where(receive_user_id: current_user.id)
     @thanks = Post.where(user_id: current_user.id)
+    @post = Post.find(params[:id])
   end
 
   private

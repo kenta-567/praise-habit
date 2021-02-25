@@ -16,6 +16,9 @@
             <% if receive.replies.blank? %>
               <%= link_to "Thanks", {controller: 'replies', action: 'new', id: receive.user.id}, class: "fuwatto_btn_yellow" %>
             <% end %>
+            <div class='star-btn' id="favorite_<%= receive.id %>">
+              <%= render "favorites/favorite", post: receive %>
+            </div>
             <% receive.replies.each do |reply| %>
               <label class="letter-content"><%= reply.reply_content %></label>
             <% end %>

@@ -1,0 +1,9 @@
+<% if !Favorite.exists?(receive_user_id: current_user.id, post_id: post.id) %>
+  <%= link_to favorites_path(post_id: post.id), method: :post, remote: true, class:"favorite-btn" do %>
+    <i class="fas fa-star"></i>
+  <% end %>
+<% else %>
+  <%= link_to favorite_path(id: post.favorite.id), method: :delete, remote: true, class:"favorite-btn" do %>
+    <i class="far fa-star"></i>
+  <% end %>
+<% end %>
