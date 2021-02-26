@@ -10,12 +10,23 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to users_my_page_path(@user.id)
+    else
+      render :action => :edit
+    end
   end
 
   def unsubscribe
+    @user = User.find(params[:id])
   end
 
   def withdrawal
+    @user = User.find(params[:id])
+    @user.update(is_active: false)
+    reset_session
+    redirect_to root_path
   end
 
 

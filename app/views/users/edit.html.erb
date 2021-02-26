@@ -1,2 +1,39 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="conteiner">
+  <div class="heading">
+    <h1 class="text-center">My Profile Edit</h1>
+  </div>
+  <div class="content">
+    <%= form_with model: @user, url: user_path, local: true do |f| %>
+
+      <div class="form-group row">
+        <label class="col-2 offset-3 control-label col-from-label text-center px-0">プロフィール画像</label>
+        <%= f.file_field :profile_image, class: "pl-5 ml-3 col-3" %>
+      </div>
+
+      <div class="form-group row justify-content-center">
+        <label class="col-2 control-label col-from-label text-left pl-0">ニックネーム</label>
+        <%= f.text_field :nickname , class:"form-control pl-0 col-3" %>
+      </div>
+
+      <div class="form-group row justify-content-center">
+        <label class="col-2 control-label col-from-label text-left pl-0">Eメール</label>
+        <%= f.text_field :email , class:"form-control pl-0 col-3" %>
+      </div>
+
+      <div class="form-group row justify-content-center">
+        <label class="col-2 control-label col-from-label text-left pl-0">住んでいる都道府県</label>
+        <%= f.select :place , User.places.keys, {}, class:"form-control pl-0 col-3" %>
+      </div>
+
+      <div class="form-group row justify-content-center">
+        <label class="col-2 control-label col-from-label text-left pl-0">仕事</label>
+        <%= f.text_field :job , class:"form-control pl-0 col-3" %>
+      </div>
+
+      <div class="buttom-group">
+        <%= f.submit 'EDIT', class:"fuwatto_btn_green" %>
+        <%= link_to "UNSUBSCRIBE", users_unsubscribe_path(@user.id), class: "fuwatto_btn_red" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -11,7 +11,7 @@ class RepliesController < ApplicationController
     if @post.save!
       redirect_to reply_path(current_user.id)
     else
-      render :new
+      render :action => :new
     end
   end
 

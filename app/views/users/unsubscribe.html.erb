@@ -1,2 +1,13 @@
-<h1>Users#unsubscribe</h1>
-<p>Find me in app/views/users/unsubscribe.html.erb</p>
+<div class="conteiner">
+  <div class="heading">
+    <h1 class="text-center">UNSUBSCRIBE</h1>
+  </div>
+  <div class="unsubscribe-heading">
+    <label class="text-unsubscribe">本当に退会しますか？</label>
+  </div>
+  <div class="buttom-group">
+    <%= link_to "Continue the habit", users_my_page_path(@user.id), class: 'fuwatto_btn_blue' %>
+    <%= link_to "Unsubscribe", users_withdrawal_path(@user), method: :patch, class: 'fuwatto_btn_red' %>
+  </div>
+
+</div>

@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     if @post.save!
       redirect_to users_my_page_path
     else
-      render :new
+      render :action => :new
     end
   end
 

@@ -9,15 +9,15 @@ Rails.application.routes.draw do
   resources :replies, only: [:new, :show, :create]
   resources :favorites, only: [:create, :destroy]
   resources :users, only: [:edit, :update]
-  resources :contact, only: [:index]
+  resources :contacts, only: [:index]
   resources :calendars, only: [:show]
 
   get 'users/my_page' => 'users#show'
-  get 'users/unsubscribe' => 'users#unsubscribe'
-  get 'users/withdrawal' => 'users#withdrawal'
+  get 'users/:id/unsubscribe' => 'users#unsubscribe', as: "users_unsubscribe"
+  patch 'users/:id/withdrawal' => 'users#withdrawal', as: "users_withdrawal"
 
-  get 'contacts/confirm' => 'contacts#confirm'
-  get 'contacts/thanks' => 'contacts#thanks'
+  post 'contacts/confirm' => 'contacts#confirm'
+  post 'contacts/thanks' => 'contacts#thanks'
 
   get 'homes/about' => 'homes#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
