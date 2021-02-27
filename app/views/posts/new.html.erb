@@ -13,6 +13,15 @@
       </div>
     </div>
   </div>
+  <% if @post.errors.any? %>
+    <div class="error-message">
+      <ul style="color: red">
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="content-group">
     <div class="content-form">
     <%= form_with model: @post, url: posts_path, method: :post, local: true do |f| %>

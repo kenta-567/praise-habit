@@ -8,6 +8,7 @@
       <div class="member-list">
         <% @users.each do |user| %>
           <% if user.not_current_user?(current_user) %>
+          <% if user.is_active? %>
           <hr></hr>
             <div class="member">
               <img src=<%= user.profile_image %> class = "icon_image", fallback: "no_image.jpg">
@@ -20,6 +21,7 @@
                 <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn btn-border" %>
               </div>
             </div>
+          <% end %>
           <% end %>
         <% end %>
       </div>

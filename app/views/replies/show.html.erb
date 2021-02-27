@@ -14,7 +14,9 @@
             <label class="letter-content"><%= receive.post_content %></label>
             <label class="letter-time"><%= time_ago_in_words(receive.created_at) %></label>
             <% if receive.replies.blank? %>
-              <%= link_to "Thanks", {controller: 'replies', action: 'new', id: receive.user.id}, class: "fuwatto_btn_yellow" %>
+            <% if receive.user.is_active? %>
+              <%= link_to "Thanks", {controller: 'replies', action: 'new', id: receive.user.id, post_id: receive.id }, class: "fuwatto_btn_yellow" %>
+            <% end %>
             <% end %>
             <div class='star-btn' id="favorite_<%= receive.id %>">
               <%= render "favorites/favorite", post: receive %>

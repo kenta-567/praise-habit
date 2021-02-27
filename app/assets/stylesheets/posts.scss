@@ -33,15 +33,15 @@
   flex-direction: column;
 }
 hr {
-  width: 60%;
-  margin-left: 150px;
+  width: 70%;
+  margin: 0 15%;
 }
 
 .member {
   display: flex;
   height: 100px;
-  width: 60%;
-  margin-left: 150px;
+  width: 70%;
+  margin: 0 15%;
 }
 
 .icon_image {
@@ -49,11 +49,12 @@ hr {
   height: 80px;
   border-radius: 10px;
   object-fit: cover;
+  margin: 2% 0;
 }
 
 
 .profile {
- width: 50%;
+ width: 60%;
  margin-left: 20px;
  font-family: 'Prata', serif;
 }
@@ -69,13 +70,14 @@ hr {
 }
 
 .profile-item {
-  margin-left: 20px;
+  margin-left: 10px;
   font-family: 'Prata', serif;
 }
 
 .send-btn {
-  padding-left: 20px;
-  padding-top: 25px;
+  padding-left: 10px;
+  padding-top: 6%;
+  padding-bottom: 6%;
 }
 
 a.btn-border {
@@ -115,7 +117,7 @@ a.btn-border:hover {
 }
 
 .ranking-name {
-  width: 25%;
+  width: 35%;
   font-size: 20px;
   font-family: 'Prata', serif;
 }

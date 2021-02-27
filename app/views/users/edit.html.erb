@@ -2,6 +2,15 @@
   <div class="heading">
     <h1 class="text-center">My Profile Edit</h1>
   </div>
+  <% if @user.errors.any? %>
+    <div class="error-message">
+      <ul style="color: red">
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="content">
     <%= form_with model: @user, url: user_path, local: true do |f| %>
 

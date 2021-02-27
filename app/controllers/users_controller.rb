@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
   def withdrawal
     @user = User.find(params[:id])
-    @user.update(is_active: false)
+    @user.update!(is_active: false)
     reset_session
     redirect_to root_path
   end

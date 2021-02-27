@@ -4,4 +4,6 @@ class Post < ApplicationRecord
   belongs_to :user
   has_one :favorite, dependent: :destroy
   has_many :replies, dependent: :destroy
+
+  validates :post_content, presence: true
 end

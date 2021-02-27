@@ -2,10 +2,17 @@
   <div class="heading">
     <h1 class="text-center">Sign up</h1>
   </div>
+  <% if @user.errors.any? %>
+    <div class="error-message">
+      <ul style="color: red">
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="content">
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <%= render "users/shared/error_messages", resource: resource %>
-
       <div class="form-group row">
         <label class="col-2 offset-3 control-label col-from-label text-center px-0">プロフィール画像</label>
         <%= f.file_field :profile_image, class: "pl-5 ml-3 col-3" %>

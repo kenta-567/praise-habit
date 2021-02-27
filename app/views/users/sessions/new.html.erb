@@ -2,8 +2,15 @@
   <div class="heading">
     <h1 class="text-center">Sign in</h1>
   </div>
-  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
 
+  <% if notice %>
+    <p class="alert alert-notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-error"><%= alert %></p>
+  <% end %>
+
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
     <div class="form-group row justify-content-center">
       <label class="col-2 control-label col-from-label text-left pl-0">ニックネーム</label>
       <%= f.text_field :nickname , class:"form-control pl-0 col-3" %>

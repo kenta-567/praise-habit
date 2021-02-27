@@ -4,27 +4,34 @@
   </div>
   <div class="receive-member">
     <div class="receive-member-content">
-      <% @receives.each do |receive| %>
         <div class="reply-item">
-          <lavel>From<%= receive.user.nickname %></lavel>
-          <text><%= receive.post_content %></text>
-          <label><%= time_ago_in_words(receive.created_at) %></label>
+          <lavel>From<%= @post.user.nickname %></lavel>
+          <text><%= @post.post_content %></text>
+          <label><%= time_ago_in_words(@post.created_at) %></label>
         </div>
-      <% end %>
     </div>
   </div>
-    <div class="content-group">
+  <% if @reply.errors.any? %>
+    <div class="error-message">
+      <ul style="color: red">
+        <% @reply.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="content-group">
     <div class="content-form">
-    <%= form_with model: @reply, url: replies_path, method: :post, local: true do |f| %>
-      <div class="form-group">
-        <%= f.text_area :reply_content, class:"form-control" %>
-      </div>
-      <div class="post-btn">
-        <%= f.submit "Thanks", class: "btn btn-lg btn-success" %>
-      </div>
-      <%= f.hidden_field :receive_user_id, :value => @user.id %>
-      <%= f.hidden_field :post_id, :value => @receives.first.id %>
-    <% end %>
+      <%= form_with model: @reply, url: replies_path, method: :post, local: true do |f| %>
+        <div class="form-group">
+          <%= f.text_area :reply_content, class:"form-control" %>
+        </div>
+        <div class="post-btn">
+          <%= f.submit "Thanks", class: "btn btn-lg btn-success" %>
+        </div>
+        <%= f.hidden_field :receive_user_id, :value => @user.id %>
+        <%= f.hidden_field :post_id, :value => @post.id %>
+      <% end %>
     </div>
   </div>
 </div>

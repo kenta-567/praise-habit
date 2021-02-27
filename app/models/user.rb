@@ -6,6 +6,11 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :replies, dependent: :destroy
 
+  validates :nickname, presence: true, uniqueness: true
+  validates :job, presence: true
+  validates :password, presence: true, on: :create
+  validates :password_confirmation, presence: true, on: :create
+
   mount_uploader :profile_image, ImageUploader
 
 
