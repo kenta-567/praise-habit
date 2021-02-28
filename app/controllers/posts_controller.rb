@@ -17,7 +17,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to users_my_page_path
     else
-      render :action => :new
+      @user =  User.find(params[:post][:receive_user_id])
+      render :new
     end
   end
 

@@ -26,6 +26,7 @@
             <% end %>
           </div>
         <% end %>
+        <%= paginate @receives, :param_name => 'receive_page' %>
       </div>
     </div>
     <div class="thanks-content">
@@ -47,6 +48,7 @@
           <% end %>
         <% end %>
       </div>
+      <%= paginate @thanks, :param_name => 'thanks_page' %>
     </div>
   </div>
 </div>

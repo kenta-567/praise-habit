@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   def show
+    @post = Post.where(user_id: current_user.id).page(params[:user_page]).per(4)
     @user = User.find(current_user.id)
     favorites = Favorite.where(receive_user_id: current_user.id).pluck(:post_id)
-    @favorites = Post.find(favorites)
+    @favorites = Post.where(id: favorites).page(params[:favorite_page]).per(4)
   end
 
   def edit
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to users_my_page_path(@user.id)
     else
-      render :action => :edit
+      render :edit
     end
   end
 

@@ -1,0 +1,51 @@
+.main-nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  &__nav-item {
+    margin: 0 30px;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+  &__item-second {
+    color: #000;
+    position: relative;
+    display: inline-block;
+    text-decoration: none!important;
+  }
+
+  &__item-second::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+  }
+
+  &__item-second:hover::after {
+    transform: scale(1, 1);
+  }
+
+  a:hover &__item-second {
+    text-decoration: none;
+  }
+
+}

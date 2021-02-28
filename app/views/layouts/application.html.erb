@@ -4,10 +4,10 @@
     <title>PraiseHabit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Prata&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Shippori+Mincho:wght@500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://main-nav__item-seconds.googleapis.com/css2?family=Julius+Sans+One&family=Prata&display=swap" rel="stylesheet">
+    <link href="https://main-nav__item-seconds.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://main-nav__item-seconds.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
+    <link href="https://main-nav__item-seconds.googleapis.com/css2?family=Italianno&family=Shippori+Mincho:wght@500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -15,31 +15,33 @@
   <body>
     <header>
       <div class="header">
-        <a class="navbar-logo" href="/">PRAiSE HABiT</a>
-        <nav class="navbar">
-          <ul class="nav">
+        <div class="logo">
+          <a class="logo__main" href="/">PRAISE HABIT</a>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__nav-list">
             <% if user_signed_in? %>
-              <li class="nav-list">
-                <%=link_to "My Page", users_my_page_path, class: "font" %>
+              <li class="main-nav__nav-item">
+                <%=link_to "My Page", users_my_page_path, class: "main-nav__item-second" %>
               </li>
-              <li class="nav-list">
-                <%=link_to "Post Page", posts_path, class: "font" %>
+              <li class="main-nav__nav-item">
+                <%=link_to "Post Page", posts_path, class: "main-nav__item-second" %>
               </li>
-              <li class="nav-list">
-                <%=link_to "Receive Page", reply_path(current_user.id), class: "font" %>
+              <li class="main-nav__nav-item">
+                <%=link_to "Receive Page", reply_path(current_user.id), class: "main-nav__item-second" %>
               </li>
-              <li class="nav-list">
-                <%=link_to "Contact", contacts_path, class: "font" %>
+              <li class="main-nav__nav-item">
+                <%=link_to "Contact", contacts_path, class: "main-nav__item-second" %>
               </li>
-              <li class="nav-list">
-                <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "font" %>
+              <li class="main-nav__nav-item">
+                <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "main-nav__item-second" %>
               </li>
             <% else %>
-              <li class="nav-list">
-                <%=link_to "About", homes_about_path, class: "font" %>
+              <li class="main-nav__nav-item">
+                <%=link_to "About", homes_about_path, class: "main-nav__item-second" %>
               </li>
-              <li class="nav-list">
-                <%=link_to "Contact", contacts_path, class: "font" %>
+              <li class="main-nav__nav-item">
+                <%=link_to "Contact", contacts_path, class: "main-nav__item-second" %>
               </li>
             <% end %>
           </ul>

@@ -11,10 +11,10 @@
         </div>
     </div>
   </div>
-  <% if @reply.errors.any? %>
+  <% if @post.errors.any? %>
     <div class="error-message">
       <ul style="color: red">
-        <% @reply.errors.full_messages.each do |message| %>
+        <% @post.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>

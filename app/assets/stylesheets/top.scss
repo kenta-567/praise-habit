@@ -1,0 +1,25 @@
+.top {
+
+  &__image {
+    height: 650px;
+    width: 100%;
+    background-image: url('photo-1502355984-b735cb2550ce');
+    background-position: top;
+    background-size: cover;
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    padding-top: 250px;
+    font-size: 60px;
+    font-family: 'Prata', serif;
+    letter-spacing: 2px;
+  }
+
+  &__sub-title {
+    padding-top: 10px;
+    font-size: 24px;
+    font-family: 'Prata', serif;
+  }
+
+}
