@@ -11,6 +11,7 @@ class RepliesController < ApplicationController
     if @post.save
       redirect_to reply_path(current_user.id)
     else
+      @reply = Reply.new
       @user = User.find(params[:reply][:receive_user_id])
       render :new
     end

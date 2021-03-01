@@ -1,27 +1,27 @@
-<div class="conteiner">
-  <div class="confirm-heading">
-    <h1>Confrmation</h1>
+<div class="confirm">
+  <div class="confirm__heading">
+    <h1 class="confirm__title">Confrmation</h1>
   </div>
   <%= form_for @contact, :url => contacts_thanks_path do |f| %>
-    <div class="contact-box">
-      <div class="form-group row justify-content-center">
-        <label class="col-2 control-label col-from-label text-left pl-0">ニックネーム</label>
+    <div class="confirm__box">
+      <div class="confirm__from form-group row justify-content-center">
+        <label class="col-2 control-label col-from-label text-left pl-0 confirm__label">ニックネーム</label>
         <%= f.hidden_field :name %>
-        <label class="col-3"><%= @contact.name %></label>
+        <label class="col-3 confirm__label"><%= @contact.name %></label>
       </div>
-      <div class="form-group row justify-content-center">
-        <label class="col-2 control-label col-from-label text-left pl-0">メールアドレス</label>
+      <div class="form-group row justify-content-center confirm__form">
+        <label class="col-2 control-label col-from-label text-left pl-0 confirm__label">メールアドレス</label>
         <%= f.hidden_field :email %>
-        <label class="col-3"><%= @contact.email %></label>
+        <label class="col-3 confirm__label"><%= @contact.email %></label>
       </div>
-      <div class="form-group row justify-content-center">
-        <label class="col-2 control-label col-from-label text-left pl-0">お問い合わせ内容</label>
+      <div class="form-group row justify-content-center confirm__form">
+        <label class="col-2 control-label col-from-label text-left pl-0 confirm__label">お問い合わせ内容</label>
         <%= f.hidden_field :message %>
-        <label class="col-3"><%= simple_format(@contact.message) %></label>
+        <label class="col-3 confirm__text"><%= simple_format(@contact.message) %></label>
       </div>
     </div>
-    <div class="contact-buttom">
-      <%= f.submit 'SUBMIT', :class => 'fuwatto_btn_blue' %>
+    <div class="confirm__contact-button">
+      <%= f.submit 'SUBMIT', :class => 'confirm__fuwatto-button--blue' %>
     </div>
   <% end %>
 </div>

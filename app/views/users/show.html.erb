@@ -1,61 +1,61 @@
-<div class="conteiner">
-  <div class="post-heading">
-    <h1>My page</h1>
+<div class="my-page">
+  <div class="my-page__heading">
+    <h1 class="my-page__title">My page</h1>
   </div>
-  <div class="my-profile">
-    <div class="my-profile-content">
-      <img src=<%= @user.profile_image %> class = "my-icon_image", fallback: "no_image.jpg">
-      <div class="my-profile-box">
-        <label class="my-profile-name">ニックネーム:</label><label class="my-profile-item"><%= @user.nickname %></label><br>
-        <label class="my-profile-place">住まい:</label><label class="my-profile-item"><%= @user.place %></label><br>
-        <label class="my-profile-job">仕事:</label><label class="my-profile-item"><%= @user.job %></label>
+  <div class="my-page__profile">
+    <div class="my-page__profile-content">
+      <img src=<%= @user.profile_image %> class = "my-page__icon_image", fallback: "no_image.jpg">
+      <div class="my-page__profile-box">
+        <label class="my-page__profile-name">ニックネーム:</label><label class="my-page__profile-item"><%= @user.nickname %></label><br>
+        <label class="my-page__profile-place">住まい:</label><label class="my-page__profile-item"><%= @user.place %></label><br>
+        <label class="my-page__profile-job">仕事:</label><label class="my-page__profile-item"><%= @user.job %></label>
       </div>
     </div>
-    <div class="btn-box">
-      <div class="edit-btn">
-        <%= link_to "EDIT", edit_user_path(@user.id), class: 'btn btn-shadow' %>
+    <div class="my-page__btn-box">
+      <div class="my-page__edit-btn">
+        <%= link_to "EDIT", edit_user_path(@user.id), class: 'btn my-page__btn-shadow' %>
       </div>
-      <div class="calender-btn">
-        <%= link_to "Calender", calendar_path(@user.id), class: 'btn btn-shadow' %>
+      <div class="my-page__calender-btn">
+        <%= link_to "Calender", calendar_path(@user.id), class: 'btn my-page__btn-shadow' %>
       </div>
-    </div>
-  </div>
-
-
-  <div class="my-content">
-    <div class="post-content">
-      <div class="post-content-heading">
-        <h2>My Post List</h2>
-      </div>
-      <div class="post-list">
-        <% @post.each do |user| %>
-          <div class="post-item">
-          <% post_user = User.find_by(id: user.receive_user_id) %>
-            <label class="letter-name">Dear&emsp;<%= post_user.nickname %></label>
-            <label class="letter-content"><%= user.post_content %></label>
-            <label class="letter-time"><%= time_ago_in_words(user.created_at) %></label>
-          </div>
-        <% end %>
-      </div>
-      <%= paginate @post, :param_name => 'user_page' %>
-    </div>
-
-    <div class="favorite-content">
-      <div class="favorite-content-heading">
-        <h2>My Favorite Praise!</h2>
-      </div>
-      <div class="post-list">
-      <% if @favorites.present? %>
-        <% @favorites.each do |favorite| %>
-          <div class="post-item">
-            <label class="letter-name">from&emsp;<%= favorite.user.nickname %></label>
-            <label class="letter-content"><%= favorite.post_content %></label>
-            <label class="letter-time"><%= time_ago_in_words(favorite.created_at) %></label>
-          </div>
-        <% end %>
-      <% end %>
-      </div>
-      <%= paginate @favorites, :param_name => 'favorite_page' %>
     </div>
   </div>
 </div>
+
+<div class="my-content">
+  <div class="my-content__post">
+    <div class="my-content__post-heading">
+      <h2 class="my-content__post-title">My Post List</h2>
+    </div>
+    <div class="my-content__post-list">
+      <% @post.each do |user| %>
+        <div class="my-content__post-item">
+        <% post_user = User.find_by(id: user.receive_user_id) %>
+          <label class="my-content__post-name">Dear&emsp;<%= post_user.nickname %></label>
+          <label class="my-content__post-content"><%= user.post_content %></label>
+          <label class="my-content__post-time"><%= time_ago_in_words(user.created_at) %></label>
+        </div>
+      <% end %>
+    </div>
+    <%= paginate @post, :param_name => 'user_page' %>
+  </div>
+
+  <div class="my-content__favorite">
+    <div class="my-content__favorite-heading">
+      <h2 class="my-content__favorite-title">My Favorite Praise!</h2>
+    </div>
+    <div class="post-list">
+    <% if @favorites.present? %>
+      <% @favorites.each do |favorite| %>
+        <div class="my-content__post-item">
+          <label class="my-content__post-name">from&emsp;<%= favorite.user.nickname %></label>
+          <label class="my-content__post-content"><%= favorite.post_content %></label>
+          <label class="my-content__post-time"><%= time_ago_in_words(favorite.created_at) %></label>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+    <%= paginate @favorites, :param_name => 'favorite_page' %>
+  </div>
+</div>
+

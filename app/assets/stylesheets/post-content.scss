@@ -1,0 +1,117 @@
+.post-content {
+  display: flex;
+
+  &__members {
+    width: 50%;
+  }
+
+  &__members-heading {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+  &__member-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__line {
+    width: 70%;
+    margin: 1% 15%;
+  }
+
+  &__member {
+    display: flex;
+    height: 100px;
+    width: 70%;
+    margin: 0 15%;
+  }
+
+  &__icon_image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 2% 0;
+  }
+
+  &__profile {
+    width: 60%;
+    margin-left: 20px;
+    padding: 1.5% 0;
+    font-family: 'Prata', serif;
+  }
+
+  &__profile-place {
+    margin-left: 47px;
+    font-family: 'Prata', serif;
+  }
+
+  &__profile-job {
+    margin-left: 63px;
+    margin-bottom: 0;
+    font-family: 'Prata', serif;
+  }
+
+  &__profile-item {
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-family: 'Prata', serif;
+  }
+
+  &__send-button {
+    padding-left: 10px;
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+
+  &__button-border {
+    border: 2px solid #000!important;
+    border-radius: 0;
+    background: #fff;
+  }
+
+  &__button-border:hover {
+    color: #fff!important;
+    background: #000;
+  }
+
+  &__ranking {
+    width: 50%;
+  }
+
+  &__ranking-heading {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+  &__ranking-box {
+    text-align: center;
+  }
+
+  &__ranking-list {
+    margin-bottom: 10px;
+  }
+
+  &__ranking-number {
+    width: 10%;
+    font-size: 20px;
+    font-family: 'Prata', serif;
+    letter-spacing: 5px;
+  }
+
+  &__ranking-name {
+    width: 35%;
+    font-size: 20px;
+    font-family: 'Prata', serif;
+  }
+
+  &__ranking-post-count {
+    width: 10%;
+    font-size: 20px;
+    font-family: 'Prata', serif;
+  }
+}

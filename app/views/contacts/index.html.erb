@@ -1,7 +1,7 @@
-<div class="conteiner">
+<div class="contact">
   <%= form_for @contact, :url => contacts_confirm_path do |f| %>
-    <div class="contact-heading">
-      <h1>Contact</h1>
+    <div class="contact__heading">
+      <h1 class="contact__title">Contact</h1>
     </div>
 
     <% if @contact.errors.any? %>
@@ -15,22 +15,22 @@
       </div>
     <% end %>
 
-    <div class="contact-box">
-      <div class="form-group row justify-content-center">
-        <label class="col-2 control-label col-from-label text-left pl-0">ニックネーム<span class="text-danger">（必須）</span></label>
-        <%= f.text_field :name , class:"form-control pl-0 col-3" %>
+    <div class="contact__box">
+      <div class="form-group row justify-content-center contact__form">
+        <label class="col-2 control-label col-from-label text-left pl-0 contact__label">ニックネーム<span class="text-danger">（必須）</span></label>
+        <%= f.text_field :name , class:"form-control pl-0 col-3 contact__text" %>
       </div>
-      <div class="form-group row justify-content-center">
-        <label class="col-2 control-label col-from-label text-left pl-0">メールアドレス<span class="text-danger">（必須）</span></label>
-        <%= f.text_field :email , class:"form-control pl-0 col-3" %>
+      <div class="form-group row justify-content-center contact__form">
+        <label class="col-2 control-label col-from-label text-left pl-0 contact__label">メールアドレス<span class="text-danger">（必須）</span></label>
+        <%= f.text_field :email , class:"form-control pl-0 col-3 contact__text" %>
       </div>
-      <div class="form-group row justify-content-center">
-        <label class="col-2 control-label col-from-label text-left pl-0">お問い合わせ内容</label>
-        <%= f.text_area :message, class:"form-control pl-0 col-3" %>
+      <div class="form-group row justify-content-center contact__form">
+        <label class="col-2 control-label col-from-label text-left pl-0 contact__label">お問い合わせ内容</label>
+        <%= f.text_area :message, class:"form-control pl-0 col-3 contact__textarea" %>
       </div>
     </div>
-    <div class="contact-buttom">
-      <%= f.submit 'CONFIRM', class: "fuwatto_btn_green" %>
+    <div class="contact__contact-button">
+      <%= f.submit 'CONFIRM', class: "contact__fuwatto-button--green" %>
     </div>
   <% end %>
 </div>

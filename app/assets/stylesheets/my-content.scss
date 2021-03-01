@@ -1,0 +1,60 @@
+.my-content {
+  display: flex;
+
+  &__post {
+    width: 50%;
+  }
+
+  &__post-heading {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+  &__post-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__post-item {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    padding: 0.5%;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 10px #3c3c3c;
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  &__post-name {
+    font-size: 20px;
+    font-family: 'Shippori Mincho', serif;
+  }
+
+  &__post-content {
+    font-size: 20px;
+    font-family: 'Shippori Mincho', serif;
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+
+  &__post-time {
+    font-size: 18px;
+    font-family: 'Shippori Mincho', serif;
+  }
+
+  &__favorite {
+    width: 50%;
+  }
+
+  &__favorite-heading {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+}

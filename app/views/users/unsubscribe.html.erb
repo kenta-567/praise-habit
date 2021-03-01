@@ -1,13 +1,13 @@
-<div class="conteiner">
-  <div class="heading">
-    <h1 class="text-center">UNSUBSCRIBE</h1>
+<div class="unsubscribe">
+  <div class="unsubscribe__heading">
+    <h1 class="text-center unsubscribe__title">UNSUBSCRIBE</h1>
   </div>
-  <div class="unsubscribe-heading">
-    <label class="text-unsubscribe">本当に退会しますか？</label>
+  <div class="unsubscribe__content">
+    <label class="unsubscribe__text">本当に退会しますか？</label>
   </div>
-  <div class="buttom-group">
-    <%= link_to "Continue the habit", users_my_page_path(@user.id), class: 'fuwatto_btn_blue' %>
-    <%= link_to "Unsubscribe", users_withdrawal_path(@user.id), method: :patch, class: 'fuwatto_btn_red' %>
+  <div class="unsubscribe__button-group">
+    <%= link_to "Continue the habit", users_my_page_path(@user.id), class: 'unsubscribe__fuwatto-button--blue' %>
+    <%= link_to "Unsubscribe", users_withdrawal_path(@user.id), method: :patch, class: 'unsubscribe__fuwatto-button--red' %>
   </div>
 
 </div>

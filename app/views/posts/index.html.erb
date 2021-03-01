@@ -1,41 +1,41 @@
-<div class="conteiner">
-  <div class="post-heading">
-    <h1>Let's Praise!</h1>
+<div class="poat-index">
+  <div class="post-index__heading">
+    <h1  class="post-index__title">Let's Praise!</h1>
   </div>
-  <div class="index-content">
-    <div class="members">
-      <h2 class="members-heading">Members</h2>
-      <div class="member-list">
+  <div class="post-content">
+    <div class="post-content__members">
+      <h2 class="post-content__members-heading">Members</h2>
+      <div class="post-content__member-list">
         <% @users.each do |user| %>
           <% if user.not_current_user?(current_user) %>
           <% if user.is_active? %>
-          <hr></hr>
-            <div class="member">
-              <img src=<%= user.profile_image %> class = "icon_image", fallback: "no_image.jpg">
-              <div class="profile">
-                <label class="profile-name">ニックネーム:</label><label class="profile-item"><%= user.nickname %></label><br>
-                <label class="profile-place">住まい:</label><label class="profile-item"><%= user.place %></label><br>
-                <label class="profile-job">仕事:</label><label class="profile-item"><%= user.job %></label>
+          <hr class="post-content__line"></hr>
+            <div class="post-content__member">
+              <img src=<%= user.profile_image %> class = "post-content__icon_image", fallback: "no_image.jpg">
+              <div class="post-content__profile">
+                <label class="post-content__profile-name">ニックネーム:</label><label class="post-content__profile-item"><%= user.nickname %></label><br>
+                <label class="post-content__profile-place">住まい:</label><label class="post-content__profile-item"><%= user.place %></label><br>
+                <label class="post-content__profile-job">仕事:</label><label class="post-content__profile-item"><%= user.job %></label>
               </div>
-              <div class="send-btn">
-                <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn btn-border" %>
+              <div class="post-content__send-button">
+                <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn post-content__button-border" %>
               </div>
             </div>
           <% end %>
           <% end %>
         <% end %>
       </div>
-      <hr></hr>
+      <hr class="post-content__line"></hr>
       <%= paginate @users %>
     </div>
-    <div class="ranking">
-      <h2 class="ranking-heading">Post Rnking</h2>
-      <div class="ranking-box">
+    <div class="post-content__ranking">
+      <h2 class="post-content__ranking-heading">Post Rnking</h2>
+      <div class="post-content__ranking-box">
         <% @rankings.each.with_index(1) do |ranking, i| %>
-        <div class="ranking-list">
-          <label class="ranking-number">第<%= i %>位</label>
-          <label class="ranking-name"><%= ranking.nickname %></label>
-          <label class="ranking-post"><%= ranking.posts.count %>&nbsp;post</label>
+        <div class="post-content__ranking-list">
+          <label class="post-content__ranking-number">第<%= i %>位</label>
+          <label class="post-content__ranking-name"><%= ranking.nickname %></label>
+          <label class="post-content__ranking-post-count"><%= ranking.posts.count %>&nbsp;post</label>
         </div>
         <% end %>
       </div>

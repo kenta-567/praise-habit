@@ -1,15 +1,14 @@
-<div class="conteiner">
-
-  <div class="post-heading">
-    <h1>New Praise!</h1>
+<div class="post-new">
+  <div class="post-new__heading">
+    <h1 class="post-new__title">New Praise!</h1>
   </div>
-  <div class="receive-member">
-    <div class="receive-member-content">
-      <img src=<%= @user.profile_image %> class = "icon_image", fallback: "no_image.jpg">
-      <div class="receive-profile">
-        <label class="profile-name">ニックネーム:</label><label class="profile-item"><%= @user.nickname %></label><br>
-        <label class="profile-place">住まい:</label><label class="profile-item"><%= @user.place %></label><br>
-        <label class="profile-job">仕事:</label><label class="profile-item"><%= @user.job %></label>
+  <div class="post-new__receive-member">
+    <div class="post-new__member-content">
+      <img src=<%= @user.profile_image %> class = "post-new__icon_image", fallback: "no_image.jpg">
+      <div class="post-new__member-profile">
+        <label class="post-new__profile-name">ニックネーム:</label><label class="post-new__profile-item"><%= @user.nickname %></label><br>
+        <label class="post-new__profile-place">住まい:</label><label class="post-new__profile-item"><%= @user.place %></label><br>
+        <label class="post-new__profile-job">仕事:</label><label class="post-new__profile-item"><%= @user.job %></label>
       </div>
     </div>
   </div>
@@ -22,14 +21,14 @@
       </ul>
     </div>
   <% end %>
-  <div class="content-group">
-    <div class="content-form">
+  <div class="post-new__content">
+    <div class="post-new__content-form">
     <%= form_with model: @post, url: posts_path, method: :post, local: true do |f| %>
-      <div class="form-group">
-        <%= f.text_area :post_content, class:"form-control" %>
+      <div class="post-new__form form-group">
+        <%= f.text_area :post_content, class:"form-control post-new__textarea" %>
       </div>
-      <div class="post-btn">
-        <%= f.submit "SEND PRAISE", class: "btn btn-lg btn-success" %>
+      <div class="post-new__button">
+        <%= f.submit "SEND PRAISE", class: "post-new__fuwatto-button--green" %>
       </div>
       <%= f.hidden_field :receive_user_id, :value => @user.id %>
     <% end %>
