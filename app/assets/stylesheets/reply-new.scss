@@ -1,4 +1,13 @@
 .reply-new {
+  background-image: url('pexels-photo-2072165');
+  background-size: cover;
+  background-position: center;
+
+  &__bg-opacity {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+  }
 
   &__heading {
     padding-top: 150px;
@@ -49,7 +58,7 @@
 
   &__content-group {
     margin-top: 100px;
-    margin-bottom: 120px;
+    padding-bottom: 30%;
     display: flex;
     justify-content: center;
     height: 300px;

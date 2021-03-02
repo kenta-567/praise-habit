@@ -1,37 +1,39 @@
 <div class="post-new">
-  <div class="post-new__heading">
-    <h1 class="post-new__title">New Praise!</h1>
-  </div>
-  <div class="post-new__receive-member">
-    <div class="post-new__member-content">
-      <img src=<%= @user.profile_image %> class = "post-new__icon_image", fallback: "no_image.jpg">
-      <div class="post-new__member-profile">
-        <label class="post-new__profile-name">ニックネーム:</label><label class="post-new__profile-item"><%= @user.nickname %></label><br>
-        <label class="post-new__profile-place">住まい:</label><label class="post-new__profile-item"><%= @user.place %></label><br>
-        <label class="post-new__profile-job">仕事:</label><label class="post-new__profile-item"><%= @user.job %></label>
+  <div class="post-new__bg-opacity">
+    <div class="post-new__heading">
+      <h1 class="post-new__title">New Praise!</h1>
+    </div>
+    <div class="post-new__receive-member">
+      <div class="post-new__member-content">
+        <img src=<%= @user.profile_image %> class = "post-new__icon_image", fallback: "no_image.jpg">
+        <div class="post-new__member-profile">
+          <label class="post-new__profile-name">ニックネーム:</label><label class="post-new__profile-item"><%= @user.nickname %></label><br>
+          <label class="post-new__profile-place">住まい:</label><label class="post-new__profile-item"><%= @user.place %></label><br>
+          <label class="post-new__profile-job">仕事:</label><label class="post-new__profile-item"><%= @user.job %></label>
+        </div>
       </div>
     </div>
-  </div>
-  <% if @post.errors.any? %>
-    <div class="error-message">
-      <ul style="color: red">
-        <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="post-new__content">
-    <div class="post-new__content-form">
-    <%= form_with model: @post, url: posts_path, method: :post, local: true do |f| %>
-      <div class="post-new__form form-group">
-        <%= f.text_area :post_content, class:"form-control post-new__textarea" %>
+    <% if @post.errors.any? %>
+      <div class="error-message">
+        <ul style="color: red">
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
       </div>
-      <div class="post-new__button">
-        <%= f.submit "SEND PRAISE", class: "post-new__fuwatto-button--green" %>
-      </div>
-      <%= f.hidden_field :receive_user_id, :value => @user.id %>
     <% end %>
+    <div class="post-new__content">
+      <div class="post-new__content-form">
+      <%= form_with model: @post, url: posts_path, method: :post, local: true do |f| %>
+        <div class="post-new__form form-group">
+          <%= f.text_area :post_content, class:"form-control post-new__textarea" %>
+        </div>
+        <div class="post-new__button">
+          <%= f.submit "SEND PRAISE", class: "post-new__fuwatto-button--green" %>
+        </div>
+        <%= f.hidden_field :receive_user_id, :value => @user.id %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

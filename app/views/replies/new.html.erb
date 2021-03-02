@@ -1,37 +1,39 @@
 <div class="reply-new">
-  <div class="reply-new__heading">
-    <h1 class="reply-new__title">New Thanks!</h1>
-  </div>
-  <div class="reply-new__receive-member">
-    <div class="reply-new__member-content">
-        <div class="reply-new__item">
-          <label class="reply-new__name">From&emsp;<%= @post.user.nickname %></label>
-          <text class="reply-new__content"><%= @post.post_content %></text>
-          <label class="reply-new__time"><%= time_ago_in_words(@post.created_at) %></label>
-        </div>
+  <div class="reply-new__bg-opacity">
+    <div class="reply-new__heading">
+      <h1 class="reply-new__title">New Thanks!</h1>
     </div>
-  </div>
-  <% if @post.errors.any? %>
-    <div class="error-message">
-      <ul style="color: red">
-        <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+    <div class="reply-new__receive-member">
+      <div class="reply-new__member-content">
+          <div class="reply-new__item">
+            <label class="reply-new__name">From&emsp;<%= @post.user.nickname %></label>
+            <text class="reply-new__content"><%= @post.post_content %></text>
+            <label class="reply-new__time"><%= time_ago_in_words(@post.created_at) %></label>
+          </div>
+      </div>
+    </div>
+    <% if @post.errors.any? %>
+      <div class="error-message">
+        <ul style="color: red">
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="reply-new__content-group">
+      <div class="reply-new__content-form">
+        <%= form_with model: @reply, url: replies_path, method: :post, local: true do |f| %>
+          <div class="reply-new__form-group">
+            <%= f.text_area :reply_content, class:"reply-new__text-area form-control" %>
+          </div>
+          <div class="reply-new__post-button">
+            <%= f.submit "Thanks", class: "reply-new__fuwatto-button--green" %>
+          </div>
+          <%= f.hidden_field :receive_user_id, :value => @user.id %>
+          <%= f.hidden_field :post_id, :value => @post.id %>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="reply-new__content-group">
-    <div class="reply-new__content-form">
-      <%= form_with model: @reply, url: replies_path, method: :post, local: true do |f| %>
-        <div class="reply-new__form-group">
-          <%= f.text_area :reply_content, class:"reply-new__text-area form-control" %>
-        </div>
-        <div class="reply-new__post-button">
-          <%= f.submit "Thanks", class: "reply-new__fuwatto-button--green" %>
-        </div>
-        <%= f.hidden_field :receive_user_id, :value => @user.id %>
-        <%= f.hidden_field :post_id, :value => @post.id %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

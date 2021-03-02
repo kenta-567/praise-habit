@@ -48,7 +48,7 @@
     <% if @favorites.present? %>
       <% @favorites.each do |favorite| %>
         <div class="my-content__post-item">
-          <label class="my-content__post-name">from&emsp;<%= favorite.user.nickname %></label>
+          <label class="my-content__post-name">From&emsp;<%= favorite.user.nickname %></label>
           <label class="my-content__post-content"><%= favorite.post_content %></label>
           <label class="my-content__post-time"><%= time_ago_in_words(favorite.created_at) %></label>
         </div>

@@ -1,12 +1,26 @@
 .post-new {
+  background-image: url('pexels-photo-6140236');
+  background-size: cover;
+  background-position: 0 -390px;
+
+
+  &__bg-opacity {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+  }
 
   &__heading {
     padding-top: 150px;
     padding-bottom: 80px;
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 60px;
     text-align: center;
   }
+
+  &__title {
+    font-size: 60px;
+  }
+
 
   &__receive-member {
     display: flex;
@@ -15,9 +29,12 @@
 
   &__member-content {
     display: flex;
-    height: 100px;
     width: 30%;
-    justify-content: center;
+    padding: 0.5%;
+    text-align: center;
+    box-shadow: 0 0 10px #3c3c3c;
+    background-color: #fff;
+    border-radius: 25px;
   }
 
   &__icon_image {
@@ -25,34 +42,43 @@
     height: 100px;
     border-radius: 10px;
     object-fit: cover;
+    margin: 1%;
   }
 
   &__member-profile {
-    width: 50%;
+    width: 80%;
     padding: 1.5% 0;
-    margin-left: 20px;
+    margin-left: 2%;
     font-family: 'Prata', serif;
     text-align: center;
   }
 
-  &__profile-place {
-    margin-left: 47px;
+  &__profile-name {
+    width: 30%;
     font-family: 'Prata', serif;
+    text-align: right;
+  }
+
+  &__profile-place {
+    width: 30%;
+    font-family: 'Prata', serif;
+    text-align: right;
   }
 
   &__profile-job {
-    margin-left: 63px;
+    width: 30%;
     font-family: 'Prata', serif;
+    text-align: right;
   }
 
   &__profile-item {
-    margin-left: 10px;
+    width: 60%;
     font-family: 'Prata', serif;
   }
 
   &__content {
     margin-top: 100px;
-    margin-bottom: 120px;
+    padding-bottom: 30%;
     display: flex;
     justify-content: center;
     height: 300px;
