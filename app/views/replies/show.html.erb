@@ -11,6 +11,9 @@
         <% @receives.each do |receive| %>
           <div class="reply__post-box">
             <label class="reply__post-name">From&emsp;<%= receive.user.nickname %></label>
+            <div class='reply__star-btn' id="favorite_<%= receive.id %>">
+              <%= render "favorites/favorite", post: receive %>
+            </div>
             <label class="reply__post-content"><%= receive.post_content %></label>
             <label class="reply__post-time"><%= time_ago_in_words(receive.created_at) %></label>
             <% if receive.replies.blank? %>
@@ -18,9 +21,6 @@
               <%= link_to "Thanks", {controller: 'replies', action: 'new', id: receive.user.id, post_id: receive.id }, class: "reply__fuwatto-button--yellow" %>
             <% end %>
             <% end %>
-            <div class='reply__star-btn' id="favorite_<%= receive.id %>">
-              <%= render "favorites/favorite", post: receive %>
-            </div>
             <% receive.replies.each do |reply| %>
               <label class="reply__post-content"><%= reply.reply_content %></label>
             <% end %>

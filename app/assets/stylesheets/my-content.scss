@@ -29,7 +29,14 @@
     box-shadow: 0 0 10px #3c3c3c;
     background-color: #fff;
     border-radius: 50px;
+    transition: .3s;
   }
+
+  &__post-item:hover {
+    transform: translateY(-8px);
+    text-decoration: none;
+  }
+
 
   &__post-name {
     font-size: 20px;

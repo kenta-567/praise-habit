@@ -28,7 +28,15 @@
     box-shadow: 0 0 10px #3c3c3c;
     background-color: #fff;
     border-radius: 50px;
+    transition: .3s;
   }
+
+
+  &__post-box:hover {
+    transform: translateY(-8px);
+    text-decoration: none;
+  }
+
 
   &__post-name {
     font-size: 20px;
@@ -45,6 +53,10 @@
   &__post-time {
     font-size: 18px;
     font-family: 'Shippori Mincho', serif;
+  }
+
+  &__star-btn {
+    padding-left: 80%;
   }
 
   %__fuwatto-button {
@@ -107,6 +119,12 @@
     box-shadow: 0 0 10px #3c3c3c;
     background-color: #fff;
     border-radius: 50px;
+    transition: .3s;
+  }
+
+  &__post-item:hover {
+    transform: translateY(-8px);
+    text-decoration: none;
   }
 
   &__thanks-name {

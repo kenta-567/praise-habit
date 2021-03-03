@@ -1,9 +1,6 @@
 <div class="conteiner">
   <%= month_calendar do |date| %>
     <%= date.strftime("%d") %><br>
-    <% if current_user.posts.blank? %>
-
-    <% end %>
   <% end %>
   <div class="today-post">
     <label class="today-post-item">今日の投稿数</label><br>
