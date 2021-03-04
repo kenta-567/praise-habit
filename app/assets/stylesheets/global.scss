@@ -1,16 +1,58 @@
 
-%__heading {
-  padding-top: 150px;
-  padding-bottom: 80px;
+%heading {
+  padding-top: 9%;
+  padding-bottom: 5%;
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
 }
 
-%__title {
+%title {
   font-size: 60px;
+  letter-spacing: 2px;
 }
 
-%__fuwatto-button {
+%content-heading {
+  margin-bottom: 4%;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+%content-title {
+  font-size: 38px;
+}
+
+%list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%box {
+  display: flex;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+  padding: 0.5%;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 10px #3c3c3c;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: .3s;
+}
+
+%box-hover {
+  transform: translateY(-8px);
+  text-decoration: none;
+}
+
+%profile-item {
+  width: 30%;
+  font-family: 'Prata', serif;
+  text-align: right;
+}
+
+%fuwatto-button {
   display: inline-block;
   color: #FFF;
   padding: 0.8em;
@@ -27,13 +69,13 @@
   color: #212529;
 }
 
-%__fuwatto-button:hover {
+%fuwatto-button:hover {
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
 }
 
-%__bg-opacity {
+%bg-opacity {
   height: 100%;
   width: 100%;
   background-color: rgba(255,255,255,0.6);

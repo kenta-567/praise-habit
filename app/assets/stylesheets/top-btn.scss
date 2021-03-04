@@ -45,3 +45,43 @@
     color: #fff;
   }
 }
+
+@media screen and (max-width:768px) {
+  .top-btn {
+    &__button {
+      width: 200px;
+      height: 80px;
+    }
+
+    &__effect {
+      width: 200px;
+      height: 80px;
+      right: -200px;
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 80px;
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .top-btn {
+    &__button {
+      width: 200px;
+      height: 50px;
+    }
+
+    &__effect {
+      width: 200px;
+      height: 50px;
+      right: -200px;
+    }
+
+    &__link {
+      font-size: 18px;
+      line-height: 50px;
+    }
+  }
+}

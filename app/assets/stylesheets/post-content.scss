@@ -1,3 +1,5 @@
+@import "global";
+
 .post-content {
   display: flex;
 
@@ -6,15 +8,11 @@
   }
 
   &__members-heading {
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: 'Julius Sans One', sans-serif;
+    @extend %content-heading;
   }
 
   &__member-list {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @extend %list;
   }
 
   &__line {
@@ -59,12 +57,13 @@
     margin-left: 10px;
     margin-bottom: 0;
     font-family: 'Prata', serif;
+    text-align: center;
+    width: 60%;
   }
 
   &__send-button {
     padding-left: 10px;
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 4%;
   }
 
   &__button-border {
@@ -83,9 +82,7 @@
   }
 
   &__ranking-heading {
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: 'Julius Sans One', sans-serif;
+    @extend %content-heading;
   }
 
   &__ranking-box {

@@ -35,16 +35,15 @@ body {
   padding-bottom: 100px;
 }
 
-.header {
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 90px;
   position: absolute;
-  z-index: 5555;
+  z-index: 2;
 }
-
 
 .row {
   margin-left: 0;
@@ -54,13 +53,6 @@ body {
 .position {
   margin-top: 100px;
   padding-left: 0;
-}
-
-.heading {
-  padding-top: 150px;
-  padding-bottom: 80px;
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 60px;
 }
 
 ul {
@@ -86,10 +78,6 @@ ul {
 }
 
 
-h1 {
-  letter-spacing: 2px;
-}
-
 // errore
 
 .field_with_errors {
@@ -112,4 +100,16 @@ h1 {
   width: 40%;
   font-size: 20px;
   color: red;
+}
+
+@media screen and (max-width:425px) {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    z-index: 2;
+  }
 }

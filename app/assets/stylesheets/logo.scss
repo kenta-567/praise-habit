@@ -1,6 +1,4 @@
 .logo {
-
-
   &__main {
   margin: 0 30px;
   color: #000;
@@ -13,12 +11,26 @@
   transition: .3s;
   }
 
-
-
   &__main:hover {
     transform: translateY(-4px);
     text-decoration: none;
   }
+}
 
+@media screen and (max-width:768px) {
+  .logo {
+    &__main {
+    margin: 0 10px;
+    font-size: 14px;
+    }
+  }
+}
 
+@media screen and (max-width:425px) {
+  .logo {
+    &__main {
+    margin: 0 10px;
+    font-size: 8px;
+    }
+  }
 }
