@@ -14,10 +14,10 @@
 
   &__message-box {
     height: 850px;
-    width: 600px;
-    margin-top: 150px;
-    margin-bottom: 150px;
-    margin-left: 255px;
+    width: 60%;
+    margin-top: 14%;
+    margin-bottom: 14%;
+    margin-left: 20%;
     background-color: #f7f7f7;
   }
 
@@ -40,8 +40,57 @@
       font-weight: 700;
       margin: 0;
     }
-
   }
+}
+
+@media screen and (max-width:1024px) {
+  .about {
+
+    &__message {
+      padding-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .about {
+
+    &__message-box {
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    &__message {
+      padding-top: 30px;
+    }
+  }
+}
 
 
+@media screen and (max-width:425px) {
+  .about {
+
+    &__message-box {
+      height: 600px;
+      width: 90%;
+      margin-top: 16%;
+      margin-left: 5%;
+    }
+
+    &__message {
+      padding-top: 5px;
+    }
+
+    &__message-second {
+      padding-top: 0px;
+    }
+
+    &__item {
+      font-size: 12px;
+
+      &--title {
+        font-size: 16px;
+      }
+    }
+  }
 }

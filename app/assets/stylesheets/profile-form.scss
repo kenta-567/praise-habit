@@ -35,3 +35,63 @@
     }
   }
 }
+
+@media screen and (max-width:1024px) {
+    .profile-form {
+
+    &__fuwatto-button {
+      @extend %fuwatto-button;
+      @extend %fuwatto-button:hover;
+
+      &--green {
+        @extend %fuwatto-button;
+        width: 10%;
+      }
+
+      &--red {
+        @extend %fuwatto-button;
+        width: 15%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .profile-form {
+
+    &__fuwatto-button {
+      @extend %fuwatto-button;
+      @extend %fuwatto-button:hover;
+
+      &--green {
+        @extend %fuwatto-button;
+        width: 15%;
+      }
+
+      &--red {
+        @extend %fuwatto-button;
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .profile-form {
+
+    &__fuwatto-button {
+      @extend %fuwatto-button;
+      @extend %fuwatto-button:hover;
+
+      &--green {
+        @extend %fuwatto-button;
+        width: 30%;
+      }
+
+      &--red {
+        @extend %fuwatto-button;
+        width: 40%;
+      }
+    }
+  }
+}

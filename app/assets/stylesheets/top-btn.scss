@@ -46,6 +46,7 @@
   }
 }
 
+
 @media screen and (max-width:768px) {
   .top-btn {
     &__button {
@@ -69,18 +70,18 @@
 @media screen and (max-width:425px) {
   .top-btn {
     &__button {
-      width: 200px;
+      width: 150px;
       height: 50px;
     }
 
     &__effect {
-      width: 200px;
+      width: 150px;
       height: 50px;
-      right: -200px;
+      right: -150px;
     }
 
     &__link {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 50px;
     }
   }

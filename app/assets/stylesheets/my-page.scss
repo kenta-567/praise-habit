@@ -98,3 +98,118 @@
   }
 
 }
+
+@media screen and (max-width:1024px) {
+  .my-page {
+
+    &__profile-content {
+      width: 70%;
+    }
+
+    &__profile-box {
+      padding: 3% 0;
+    }
+
+    &__btn-box {
+      width: 20%;
+      text-align: center;
+    }
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .my-page {
+
+    &__profile {
+      display: block;
+    }
+
+    &__profile-content {
+      margin: 0 5%;
+      width: 90%;
+    }
+
+    &__profile-box {
+      padding: 3% 0;
+    }
+
+    &__profile-name {
+      font-size: 18px;
+    }
+
+    &__profile-place {
+      font-size: 18px;
+    }
+
+    &__profile-job {
+      font-size: 18px;
+    }
+
+    &__profile-item {
+      font-size: 18px;
+    }
+
+    &__btn-box {
+      margin: 0;
+      text-align: center;
+    }
+
+    &__edit-btn {
+      margin: 40px 0;
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .my-page {
+
+    &__profile {
+      display: block;
+    }
+
+    &__profile-content {
+      display: flex;
+      height: 100px;
+      margin: 0 5%;
+      width: 90%;
+    }
+
+    &__icon_image {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__profile-box {
+      padding: 3% 0;
+    }
+
+    &__profile-name {
+      font-size: 12px;
+    }
+
+    &__profile-place {
+      font-size: 12px;
+    }
+
+    &__profile-job {
+      font-size: 12px;
+    }
+
+    &__profile-item {
+      font-size: 12px;
+    }
+
+    &__btn-box {
+      text-align: center;
+    }
+
+    &__edit-btn {
+      margin: 40px 0;
+    }
+
+    &__calender-btn {
+      margin: 40px 0;
+    }
+  }
+}

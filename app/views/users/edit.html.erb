@@ -15,28 +15,28 @@
     <%= form_with model: @user, url: user_path, local: true do |f| %>
 
       <div class="form-group row profile-form__form">
-        <label class="col-2 offset-3 control-label col-from-label text-center px-0 profile-form__label">プロフィール画像</label>
-        <%= f.file_field :profile_image, class: "pl-5 ml-3 col-3 profile-form__file" %>
+        <label class="offset-3 control-label text-left col-md-3 px-0 profile-form__label">プロフィール画像</label>
+        <%= f.file_field :profile_image, class: "profile-form__file" %>
       </div>
 
-      <div class="form-group row justify-content-center profile-form__form">
-        <label class="col-2 control-label col-from-label text-left pl-0 profile-form__label">ニックネーム</label>
-        <%= f.text_field :nickname , class:"form-control pl-0 col-3 profile-form__text" %>
+      <div class="form-group row profile-form__form">
+        <label class="control-label offset-3 col-md-3 px-0 text-left profile-form__label">ニックネーム</label>
+        <%= f.text_field :nickname , class:"form-control pl-0 col-md-4 profile-form__text" %>
       </div>
 
-      <div class="form-group row justify-content-center profile-form__form">
-        <label class="col-2 control-label col-from-label text-left pl-0 profile-form__label">Eメール</label>
-        <%= f.text_field :email , class:"form-control pl-0 col-3 profile-form__text" %>
+      <div class="form-group row profile-form__form">
+        <label class="control-label offset-3 col-md-3 px-0 text-left profile-form__label">Eメール</label>
+        <%= f.text_field :email , class:"form-control pl-0 col-md-4 profile-form__text" %>
       </div>
 
-      <div class="form-group row justify-content-center profile-form__form">
-        <label class="col-2 control-label col-from-label text-left pl-0 profile-form__label">住んでいる都道府県</label>
-        <%= f.select :place , User.places.keys, {}, class:"form-control pl-0 col-3 profile-form__select" %>
+      <div class="form-group row profile-form__form">
+        <label class="control-label offset-3 col-md-3 px-0 text-left profile-form__label">住んでいる都道府県</label>
+        <%= f.select :place , User.places.keys, {}, class:"form-control pl-0 col-md-4 profile-form__select" %>
       </div>
 
-      <div class="form-group row justify-content-center profile-form__form">
-        <label class="col-2 control-label col-from-label text-left pl-0 profile-form__label">仕事</label>
-        <%= f.text_field :job , class:"form-control pl-0 col-3 profile-form__text" %>
+      <div class="form-group row profile-form__form">
+        <label class="control-label offset-3 col-md-3 px-0 text-left profile-form__label">仕事</label>
+        <%= f.text_field :job , class:"form-control pl-0 col-md-4 profile-form__text" %>
       </div>
 
       <div class="profile-form__button-group">

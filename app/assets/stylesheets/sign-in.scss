@@ -1,0 +1,13 @@
+@import "global";
+
+.sign-in {
+
+  &__heading {
+    @extend %heading;
+  }
+
+  &__title {
+    @extend %title;
+  }
+}
+

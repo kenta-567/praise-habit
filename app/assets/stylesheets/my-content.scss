@@ -57,5 +57,76 @@
   &__favorite-title {
     @extend %content-title;
   }
+}
 
+@media screen and (max-width:1024px) {
+  .my-content {
+
+    &__post {
+      width: 50%;
+    }
+
+    &__post-name {
+      font-size: 18px;
+    }
+
+    &__post-content {
+      font-size: 18px;
+    }
+
+    &__post-time {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .my-content {
+
+    &__post {
+      width: 50%;
+    }
+
+    &__post-name {
+      font-size: 16px;
+    }
+
+    &__post-content {
+      font-size: 16px;
+    }
+
+    &__post-time {
+      font-size: 16px;
+    }
+
+    &__favorite {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .my-content {
+    display: block;
+
+    &__post {
+      width: 100%;
+    }
+
+    &__post-name {
+      font-size: 16px;
+    }
+
+    &__post-content {
+      font-size: 16px;
+    }
+
+    &__post-time {
+      font-size: 14px;
+    }
+
+    &__favorite {
+      width: 100%;
+    }
+  }
 }

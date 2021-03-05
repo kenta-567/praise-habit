@@ -1,6 +1,6 @@
-<div class="conteiner">
-  <div class="heading">
-    <h1 class="text-center">Sign in</h1>
+<div class="container sign-in">
+  <div class="sign-in__heading">
+    <h1 class="text-center sign-in__title">Sign in</h1>
   </div>
 
   <% if notice %>
@@ -11,18 +11,18 @@
   <% end %>
 
   <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-    <div class="form-group row justify-content-center">
-      <label class="col-2 control-label col-from-label text-left pl-0">ニックネーム</label>
-      <%= f.text_field :nickname , class:"form-control pl-0 col-3" %>
+    <div class="form-group row sign-in__from">
+      <label class="control-label offset-3 col-md-3 px-0 text-left sign-in__label">ニックネーム</label>
+      <%= f.text_field :nickname , class:"form-control pl-0 col-md-4 sign-in__text" %>
     </div>
 
-    <div class="form-group row justify-content-center">
-      <label class="col-2 control-label col-from-label text-left pl-0">パスワード</label>
-      <%= f.password_field :password, autocomplete: "current-password", class:"form-control pl-0 col-3" %>
+    <div class="form-group row sign-in__from">
+      <label class="control-label offset-3 col-md-3 px-0 text-left sign-in__label">パスワード</label>
+      <%= f.password_field :password, autocomplete: "current-password", class:"form-control pl-0 col-md-4 sign-in__text" %>
     </div>
 
-    <div class="form-group position col-2 offset-5 justify-content-center">
-      <%= f.submit 'SIGN IN', class:"btn btn-md btn-block btn-success p-2" %>
+    <div class="form-group position col-md-12 p-0 text-center sign-in__button">
+      <%= f.submit 'SIGN IN', class:"btn btn-md btn-success px-5 sign-in__submit" %>
     </div>
   <% end %>
 </div>

@@ -17,20 +17,22 @@
   }
 }
 
+
 @media screen and (max-width:768px) {
   .logo {
     &__main {
     margin: 0 10px;
-    font-size: 14px;
+    font-size: 16px;
     }
   }
 }
 
 @media screen and (max-width:425px) {
   .logo {
+    width: 20%;
     &__main {
     margin: 0 10px;
-    font-size: 8px;
+    font-size: 10px;
     }
   }
 }

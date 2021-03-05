@@ -1,0 +1,12 @@
+@import "global";
+
+.sign-up {
+
+  &__heading {
+    @extend %heading;
+  }
+
+  &__title {
+    @extend %title;
+  }
+}
