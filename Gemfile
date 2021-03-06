@@ -53,6 +53,9 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  gem 'rspec-rails'
+  gem "factory_bot_rails"
+  gem 'faker'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
@@ -66,7 +69,13 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'kaminari','~> 1.2.1'
+gem 'kaminari', '~> 1.2.1'
 gem 'simple_calendar', '~> 2.0'
 gem 'dotenv-rails'
 gem 'rails-i18n'
+gem 'rubocop-airbnb'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end

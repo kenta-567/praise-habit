@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-
   devise_for :users, controllers: {
-  sessions: 'users/sessions',
-  registrations: 'users/registrations'
-}
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+  }
   root to: 'homes#top'
   resources :posts, only: [:index, :new, :create]
   resources :replies, only: [:new, :show, :create]

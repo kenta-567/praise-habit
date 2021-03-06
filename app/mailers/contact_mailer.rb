@@ -1,5 +1,4 @@
 class ContactMailer < ApplicationMailer
-
   default from: "example@example.com"
 
   def received_email(contact)

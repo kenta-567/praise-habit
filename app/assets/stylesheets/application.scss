@@ -102,6 +102,22 @@ ul {
   color: red;
 }
 
+@media screen and (max-width:1024px) {
+  .error-message {
+    width: 50%;
+    margin: 5% 25%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .error-message {
+    width: 60%;
+    margin: 5% 20%;
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width:425px) {
   .wrapper {
     display: flex;
@@ -111,5 +127,11 @@ ul {
     height: 60px;
     position: absolute;
     z-index: 2;
+  }
+
+  .error-message {
+    width: 90%;
+    margin: 5% 5%;
+    font-size: 16px;
   }
 }

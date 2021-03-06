@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-
   def create
     @post = Post.find(params[:post_id])
     if @post.user_id != current_user.id
@@ -18,5 +17,4 @@ class FavoritesController < ApplicationController
   def favorite_params
     params.require(:favorite).permit(:receive_user_id, :post_id)
   end
-
 end

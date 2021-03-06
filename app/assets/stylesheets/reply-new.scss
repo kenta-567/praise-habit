@@ -1,7 +1,7 @@
 @import "global";
 
 .reply-new {
-  background-image: url('pexels-photo-2072165');
+  background-image: image-url('pexels-photo-2072165');
   background-size: cover;
   background-position: center;
 
@@ -87,6 +87,89 @@
 
     &--green:hover {
       @extend %fuwatto-button:hover;
+    }
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .reply-new {
+
+    &__member-content {
+      width: 90%;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__content {
+      font-size: 18px;
+    }
+
+    &__time {
+      font-size: 16px;
+    }
+
+    &__content-form {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .reply-new {
+
+    &__member-content {
+      width: 100%;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__content {
+      font-size: 16px;
+    }
+
+    &__time {
+      font-size: 14px;
+    }
+
+    &__content-form {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .reply-new {
+
+    &__member-content {
+      width: 100%;
+    }
+
+    &__item {
+      width: 90%;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__content {
+      font-size: 16px;
+    }
+
+    &__time {
+      font-size: 14px;
+    }
+
+    &__content-group {
+      height: 250px;
+    }
+
+    &__content-form {
+      width: 70%;
     }
   }
 }

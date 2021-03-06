@@ -72,22 +72,11 @@
   }
 
   &__post-item {
-    display: flex;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 5%;
-    padding: 0.5%;
-    flex-direction: column;
-    text-align: center;
-    box-shadow: 0 0 10px #3c3c3c;
-    background-color: #fff;
-    border-radius: 50px;
-    transition: .3s;
+    @extend %box;
   }
 
   &__post-item:hover {
-    transform: translateY(-8px);
-    text-decoration: none;
+    @extend %box-hover;
   }
 
   &__thanks-name {
@@ -105,5 +94,141 @@
   &__thanks-time {
     font-size: 18px;
     font-family: 'Shippori Mincho', serif;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .reply {
+
+    &__post-name {
+      font-size: 18px;
+    }
+
+    &__post-content {
+      font-size: 18px;
+    }
+
+    &__post-time {
+      font-size: 16px;
+    }
+
+    &__fuwatto-button {
+
+      &--yellow {
+        width: 30%;
+        margin: 2% 35%;
+        font-size: 16px;
+      }
+    }
+
+    &__thanks-name {
+      font-size: 18px;
+    }
+
+    &__thanks-item {
+      font-size: 18px;
+    }
+
+    &__thanks-time {
+      font-size: 16px;
+    }
+  }
+
+  .fa-2x {
+    font-size: 1.5rem!important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .reply {
+
+    &__post-name {
+      font-size: 16px;
+    }
+
+    &__post-content {
+      font-size: 16px;
+    }
+
+    &__post-time {
+      font-size: 14px;
+    }
+
+    &__fuwatto-button {
+
+      &--yellow {
+        width: 30%;
+        margin: 2% 35%;
+        font-size: 16px;
+      }
+    }
+
+    &__thanks-name {
+      font-size: 16px;
+    }
+
+    &__thanks-item {
+      font-size: 16px;
+    }
+
+    &__thanks-time {
+      font-size: 14px;
+    }
+  }
+
+  .fa-2x {
+    font-size: 1.5rem!important;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .reply {
+    display: block;
+
+    &__content {
+      width: 100%;
+      margin-top: 10%;
+    }
+
+    &__post-name {
+      font-size: 16px;
+    }
+
+    &__post-content {
+      font-size: 16px;
+    }
+
+    &__post-time {
+      font-size: 14px;
+    }
+
+    &__fuwatto-button {
+
+      &--yellow {
+        width: 30%;
+        margin: 2% 35%;
+        font-size: 16px;
+      }
+    }
+
+    &__thanks-content {
+      width: 100%;
+    }
+
+    &__thanks-name {
+      font-size: 16px;
+    }
+
+    &__thanks-item {
+      font-size: 16px;
+    }
+
+    &__thanks-time {
+      font-size: 14px;
+    }
+  }
+
+  .fa-2x {
+    font-size: 1.5rem!important;
   }
 }

@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-
-
   def index
     @users = User.page(params[:page])
     @rankings = User.find(Post.group(:user_id).order('count(user_id) desc').limit(10).pluck(:user_id))
@@ -17,11 +15,10 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to users_my_page_path
     else
-      @user =  User.find(params[:post][:receive_user_id])
+      @user = User.find(params[:post][:receive_user_id])
       render :new
     end
   end
-
 
   private
 

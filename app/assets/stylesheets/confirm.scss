@@ -26,12 +26,48 @@
     &--blue {
       @extend %fuwatto-button;
       background-color: #3489db;
-      width: 10%;
+      width: 15%;
       margin: 2% 4%;
     }
 
     &--blue:hover {
       @extend %fuwatto-button:hover;
+    }
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .confirm {
+
+    &__fuwatto-button {
+
+      &--blue {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .confirm {
+
+    &__fuwatto-button {
+
+      &--blue {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .confirm {
+
+    &__fuwatto-button {
+
+      &--blue {
+        width: 40%;
+      }
     }
   }
 }

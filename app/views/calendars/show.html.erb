@@ -8,6 +8,10 @@
   </div>
   <div class="month-post">
     <label class="month-post-item">今月の投稿数</label><br>
-    <label class="month-post-item">現在&emsp;<%= @post_month %>&ensp;Praise</label>
+    <label class="month-post-item">現在&emsp;<%= @current_user.posts.current_month.count(:id) %>&ensp;Praise</label>
+  </div>
+  <div class="month-post">
+    <label class="month-post-item">先月の投稿数</label><br>
+    <label class="month-post-item">現在&emsp;<%= @current_user.posts.last_month.count(:id) %>&ensp;Praise</label>
   </div>
 </div>

@@ -35,3 +35,43 @@
     }
   }
 }
+
+@media screen and (max-width:1024px) {
+  .contact {
+
+    &__fuwatto-button {
+
+      &--green {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .contact {
+
+    &__label {
+      font-size: 14px;
+    }
+
+    &__fuwatto-button {
+
+      &--green {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .contact {
+
+    &__fuwatto-button {
+
+      &--green {
+        width: 40%;
+      }
+    }
+  }
+}

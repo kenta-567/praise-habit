@@ -8,3 +8,42 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width:1024px) {
+  .contact-thanks {
+
+    &__heading {
+      padding-top: 30%;
+    }
+
+    &__message {
+      font-size: 50px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .contact-thanks {
+
+    &__heading {
+      padding-top: 30%;
+    }
+
+    &__message {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .contact-thanks {
+
+    &__heading {
+      padding-top: 40%;
+    }
+
+    &__message {
+      font-size: 25px;
+    }
+  }
+}
