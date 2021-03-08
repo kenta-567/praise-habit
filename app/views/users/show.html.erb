@@ -4,7 +4,7 @@
   </div>
   <div class="my-page__profile">
     <div class="my-page__profile-content">
-      <img src=<%= @user.profile_image %> class = "my-page__icon_image", fallback: "no_image.jpg">
+      <%= image_tag @user.profile_image.url, class: "my-page__icon_image", fallback: "no_image.jpg" %>
       <div class="my-page__profile-box">
         <label class="my-page__profile-name">ニックネーム:</label><label class="my-page__profile-item"><%= @user.nickname %></label><br>
         <label class="my-page__profile-place">住まい:</label><label class="my-page__profile-item"><%= @user.place %></label><br>
