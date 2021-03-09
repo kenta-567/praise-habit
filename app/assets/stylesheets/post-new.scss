@@ -135,6 +135,22 @@
   }
 }
 
+@media screen and (max-width:1540px) {
+  .post-new {
+    &__member-content {
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width:1350px) {
+  .post-new {
+    &__member-content {
+      width: 40%;
+    }
+  }
+}
+
 @media screen and (max-width:768px) {
   .post-new {
     background-position: 100% 100%;

@@ -96,10 +96,27 @@
     -webkit-box-shadow: -4px -4px 0 #000;
     box-shadow: -4px -4px 0 #000;
   }
-
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1600px) {
+  .my-page {
+
+    &__profile-content {
+      width: 60%;
+    }
+
+    &__profile-box {
+      padding: 2% 0;
+    }
+
+    &__btn-box {
+      width: 20%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width:1200px) {
   .my-page {
 
     &__profile-content {

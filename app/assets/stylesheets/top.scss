@@ -24,6 +24,23 @@
 
 }
 
+@media screen and (max-width:1600px) {
+  .top {
+    &__image {
+      height: 700px;
+      background-position: 100% -0%;
+    }
+
+    &__title {
+      font-size: 58px;
+    }
+
+    &__sub-title {
+      font-size: 22px;
+    }
+  }
+}
+
 @media screen and (max-width:1024px) {
   .top {
     &__image {

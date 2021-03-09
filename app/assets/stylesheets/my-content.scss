@@ -59,7 +59,28 @@
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1600px) {
+  .my-content {
+
+    &__post {
+      width: 50%;
+    }
+
+    &__post-name {
+      font-size: 18px;
+    }
+
+    &__post-content {
+      font-size: 18px;
+    }
+
+    &__post-time {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width:1200px) {
   .my-content {
 
     &__post {
