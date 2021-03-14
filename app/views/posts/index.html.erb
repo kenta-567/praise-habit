@@ -11,7 +11,7 @@
           <% if user.is_active? %>
           <hr class="post-content__line"></hr>
             <div class="post-content__member">
-              <img src=<%= user.profile_image %> class = "post-content__icon_image", fallback: "no_image.jpg">
+              <%= image_tag user.profile_image.url, class: "post-content__icon_image", fallback: "no_image.jpg" %>
               <div class="post-content__profile">
                 <label class="post-content__profile-name">ニックネーム:</label><label class="post-content__profile-item"><%= user.nickname %></label><br>
                 <label class="post-content__profile-place">住まい:</label><label class="post-content__profile-item"><%= user.place %></label><br>
