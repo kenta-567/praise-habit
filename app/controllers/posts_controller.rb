@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @users = User.page(params[:page])
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).order(name: :asc).page(params[:page])
     @rankings = User.find(Post.group(:user_id).order('count(user_id) desc').limit(10).pluck(:user_id))
   end
 

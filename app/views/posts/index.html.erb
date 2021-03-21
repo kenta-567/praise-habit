@@ -5,6 +5,10 @@
   <div class="post-content">
     <div class="post-content__members">
       <h2 class="post-content__members-heading">Members</h2>
+      <%= search_form_for @q, url: posts_path do |f| %>
+        <%= f.search_field :job_cont, placeholder: "同じ仕事名で検索...", class: "form-control col-4" %>
+        <%= f.submit "検索", class: "btn btn-primary" %>
+      <% end %>
       <div class="post-content__member-list">
         <% @users.each do |user| %>
           <% if user.not_current_user?(current_user) %>
