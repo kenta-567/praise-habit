@@ -14,48 +14,50 @@
   </head>
 
   <body>
-    <header id="page-header">
-      <div class="wrapper">
-        <div class="logo">
-          <a class="logo__main" href="/">PRAISE HABIT</a>
+    <div class="htmlContainer">
+      <header id="page-header">
+        <div class="wrapper">
+          <div class="logo">
+            <a class="logo__main" href="/">PRAISE HABIT</a>
+          </div>
+          <nav class="main-nav">
+            <ul class="main-nav__nav-list">
+              <% if user_signed_in? %>
+                <li class="main-nav__nav-item">
+                  <%=link_to "My Page", users_my_page_path, class: "main-nav__item-second" %>
+                </li>
+                <li class="main-nav__nav-item">
+                  <%=link_to "Post Page", posts_path, class: "main-nav__item-second" %>
+                </li>
+                <li class="main-nav__nav-item">
+                  <%=link_to "Receive Page", reply_path(current_user.id), class: "main-nav__item-second" %>
+                </li>
+                <li class="main-nav__nav-item">
+                  <%=link_to "Contact", contacts_path, class: "main-nav__item-second" %>
+                </li>
+                <li class="main-nav__nav-item">
+                  <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "main-nav__item-second" %>
+                </li>
+              <% else %>
+                <li class="main-nav__nav-item">
+                  <%=link_to "About", homes_about_path, class: "main-nav__item-second" %>
+                </li>
+                <li class="main-nav__nav-item">
+                  <%=link_to "Contact", contacts_path, class: "main-nav__item-second" %>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
         </div>
-        <nav class="main-nav">
-          <ul class="main-nav__nav-list">
-            <% if user_signed_in? %>
-              <li class="main-nav__nav-item">
-                <%=link_to "My Page", users_my_page_path, class: "main-nav__item-second" %>
-              </li>
-              <li class="main-nav__nav-item">
-                <%=link_to "Post Page", posts_path, class: "main-nav__item-second" %>
-              </li>
-              <li class="main-nav__nav-item">
-                <%=link_to "Receive Page", reply_path(current_user.id), class: "main-nav__item-second" %>
-              </li>
-              <li class="main-nav__nav-item">
-                <%=link_to "Contact", contacts_path, class: "main-nav__item-second" %>
-              </li>
-              <li class="main-nav__nav-item">
-                <%=link_to "Sign Out", destroy_user_session_path, method: :delete, class: "main-nav__item-second" %>
-              </li>
-            <% else %>
-              <li class="main-nav__nav-item">
-                <%=link_to "About", homes_about_path, class: "main-nav__item-second" %>
-              </li>
-              <li class="main-nav__nav-item">
-                <%=link_to "Contact", contacts_path, class: "main-nav__item-second" %>
-              </li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <%= yield %>
-    </main>
-    <footer>
-      <div class="footer">
-        <p class="footer__item">Wishing a bright day</p>
-      </div>
-    </footer>
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+      <footer>
+        <div class="footer">
+          <p class="footer__item">Wishing a bright day</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

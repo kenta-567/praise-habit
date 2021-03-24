@@ -35,6 +35,11 @@ body {
   padding-bottom: 100px;
 }
 
+.htmlContainer {
+  width: 100%;
+  min-width: 1060px;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
