@@ -9,6 +9,8 @@ ja:
         replies: 返信内容
       reply:
         reply_content: 返信内容
+      contact:
+        email: メールアドレス
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
