@@ -15,7 +15,7 @@
     </div>
     <% if @post.errors.any? %>
       <div class="error-message">
-        <ul style="color: red">
+        <ul class="error-messages">
           <% @post.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>

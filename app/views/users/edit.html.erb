@@ -4,7 +4,7 @@
   </div>
   <% if @user.errors.any? %>
     <div class="error-message">
-      <ul style="color: red">
+      <ul class="error-messages">
         <% @user.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
