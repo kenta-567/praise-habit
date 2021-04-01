@@ -52,11 +52,21 @@
       </header>
       <main>
         <%= yield %>
+        <div class="audio_wrap">
+          <div class="audio_button">
+            <a href="" class="btn btn-sns btn-sns--music">
+              <i class="fas fa-music"></i>
+            </a>
+          </div>
+          <audio id="audio" src="South_Wind.mp3" loop>
+            あなたのブラウザーは <code>audio</code> 要素をサポートしていません。
+          </audio>
+          </div>
+        </div>
       </main>
       <footer>
         <div class="footer">
           <p class="footer__item">Wishing a bright day</p>
-        </div>
       </footer>
     </div>
   </body>
