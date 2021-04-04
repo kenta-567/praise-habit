@@ -55,35 +55,8 @@ body {
   margin-right: 0;
 }
 
-.audio_button {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  background: url(icon_154430_256.png) no-repeat center center;
-  background-size: contain;
-}
-
-a.btn-sns {
-  font-size: 2.4rem;
-  line-height: 50px;
-
-  width: 50px;
-  height: 50px;
-  padding: 0;
-
-  letter-spacing: 0;
-
-  color: #fff;
-  border-radius: 50%;
-}
-
-a.btn-sns:hover {
-  color: #fff;
-}
-
-a.btn-sns--music {
-  background: #1877f2;
+.none {
+  display: none!important;
 }
 
 .position {

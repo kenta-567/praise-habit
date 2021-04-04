@@ -52,17 +52,19 @@
       </header>
       <main>
         <%= yield %>
-        <div class="audio_wrap">
-          <div class="audio_button">
-            <a href="" class="btn btn-sns btn-sns--music">
-              <i class="fas fa-music"></i>
-            </a>
-          </div>
-          <audio id="audio" src="South_Wind.mp3" loop>
-            あなたのブラウザーは <code>audio</code> 要素をサポートしていません。
-          </audio>
-          </div>
+        <div class="none">
+          <%= audio_tag 'South_Wind.mp3' %>
         </div>
+        <input type="submit" id="operation">
+        <script>
+          const operation = document.getElementById("operation");
+          const audioPlayer = audiojs.createAll();
+          const audio = audioPlayer[0];
+
+          operation.addEventListener("click", () => {
+              audio.play();
+          });
+        </script>
       </main>
       <footer>
         <div class="footer">

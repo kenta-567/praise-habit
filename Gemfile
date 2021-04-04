@@ -79,5 +79,5 @@ group :production do
   gem 'mysql2'
 end
 gem 'ransack'
-
+gem 'audiojs-rails'
 
