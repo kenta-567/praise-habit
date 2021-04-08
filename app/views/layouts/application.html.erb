@@ -52,17 +52,26 @@
       </header>
       <main>
         <%= yield %>
-        <div class="none">
-          <%= audio_tag 'South_Wind.mp3' %>
+        <div>
+          <%= audio_tag 'South_Wind.mp3', id:"bgm" %>
         </div>
-        <input type="submit" id="operation">
+        <button id="btn-play" type="button"><i class="fas fa-volume-off"></i></button>
         <script>
-          const operation = document.getElementById("operation");
-          const audioPlayer = audiojs.createAll();
-          const audio = audioPlayer[0];
-
-          operation.addEventListener("click", () => {
-              audio.play();
+          const bgm = document.querySelector("#bgm");
+          const btn  = document.querySelector("#btn-play");
+          btn.addEventListener("click", ()=>{
+            if( ! bgm.paused ){
+              btn.innerHTML = '<i class="fas fa-volume-off"></i>';
+              bgm.pause();
+            }
+            else{
+              btn.innerHTML = '<i class="fas fa-volume-up"></i>';
+              bgm.play();
+            }
+          });
+           bgm.addEventListener("ended", ()=>{
+            bgm.currentTime = 0;
+            btn.innerHTML = '<i class="fas fa-volume-off"></i>';
           });
         </script>
       </main>
