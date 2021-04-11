@@ -55,6 +55,25 @@ body {
   margin-right: 0;
 }
 
+#btn-play {
+  border-radius: 50%;
+  line-height: 55px;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  -webkit-box-shadow: 0 4px 0 #DED7D7;
+  box-shadow: 0 4px 0 #DED7D7;
+  margin-left: 1%;
+}
+
+#btn-play:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 2px 0 #DED7D7;
+  box-shadow: 0 2px 0 #DED7D7;
+}
+
+
 .position {
   margin-top: 100px;
   padding-left: 0;
