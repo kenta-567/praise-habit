@@ -12,20 +12,20 @@
       <div class="post-content__member-list">
         <% @users.each do |user| %>
           <% if user.not_current_user?(current_user) %>
-          <% if user.is_active? %>
-          <hr class="post-content__line"></hr>
-            <div class="post-content__member">
-              <%= image_tag user.profile_image.url, class: "post-content__icon_image", fallback: "no_image.jpg" %>
-              <div class="post-content__profile">
-                <label class="post-content__profile-name">ニックネーム:</label><label class="post-content__profile-item"><%= user.nickname %></label><br>
-                <label class="post-content__profile-place">住まい:</label><label class="post-content__profile-item"><%= user.place %></label><br>
-                <label class="post-content__profile-job">仕事:</label><label class="post-content__profile-item"><%= user.job %></label>
+            <% if user.is_active? %>
+            <hr class="post-content__line"></hr>
+              <div class="post-content__member">
+                <%= image_tag user.profile_image.url, class: "post-content__icon_image", fallback: "no_image.jpg" %>
+                <div class="post-content__profile">
+                  <label class="post-content__profile-name">ニックネーム:</label><label class="post-content__profile-item"><%= user.nickname %></label><br>
+                  <label class="post-content__profile-place">住まい:</label><label class="post-content__profile-item"><%= user.place %></label><br>
+                  <label class="post-content__profile-job">仕事:</label><label class="post-content__profile-item"><%= user.job %></label>
+                </div>
+                <div class="post-content__send-button">
+                  <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn post-content__button-border" %>
+                </div>
               </div>
-              <div class="post-content__send-button">
-                <%= link_to "Praise", {controller: 'posts', action: 'new', id: user.id}, class: "btn post-content__button-border" %>
-              </div>
-            </div>
-          <% end %>
+            <% end %>
           <% end %>
         <% end %>
       </div>
